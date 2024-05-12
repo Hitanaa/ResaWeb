@@ -1,0 +1,347 @@
+*,
+*::before,
+::after {
+    box-sizing: border-box;
+}
+
+.sedgwick-ave-display-regular {
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tilt-warp-uniquifier {
+  font-family: "Tilt Warp", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+}
+
+body {
+  background-color: #000000;
+  margin: 0; /* Ajout d'une marge zéro pour le corps */
+}
+
+header {
+  position: absolute; /* Changement de la position à "fixed" */
+  top: 0; /* Fixation en haut de la fenêtre */
+  width: 100%;
+  z-index: 999;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: fit-content;
+  margin: auto;
+  background-color: #ffffff4e;
+  list-style-type: none;
+  text-align: center;
+  padding: 20px 30px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  font-size: 1.2rem;
+}
+
+nav ul li a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #000000;
+  font-family: "Tilt Warp", sans-serif;
+}
+
+nav ul li a:hover {
+  background-color: #00000042;
+  color: #ffffff;
+  border-radius: 50px;
+}
+
+
+
+
+
+/* Styles pour la section de la moto */
+.moto-section {
+  background-color: #000000; /* Fond noir */
+  color: #ffffff; /* Couleur de texte blanc */
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.moto-section video {
+  width: 100%;
+  max-height: 100%;
+  margin-top: 50px;
+}
+
+
+
+.container img {
+  width: 300px;
+}
+
+.test{
+  background-color: #000;
+  padding: 50px;
+}
+
+
+.motocycle {
+  padding: 50px;
+}
+
+.motocycle h1{
+  text-align: center;
+  font-size: 2rem;
+  
+}
+.motocycle h3 {
+  text-align: center;
+  color: #FF6262;
+}
+
+.comment {
+  padding: 50px;
+  background-color: #fff;
+}
+
+.comment h1{
+  text-align: center;
+  font-size: 3rem;
+  color: #000;
+  
+}
+.comment h3 {
+  text-align: center;
+  color: #FF6262;
+  font-size: 2rem;
+}
+
+h3 {
+  font-family: "Sedgwick Ave Display", cursive;
+}
+
+h1 {
+  font-family: "Lora", serif;
+}
+
+footer {
+  padding: 20px;
+}
+
+
+/* Styles pour la section de recherche */
+.search-section {
+  background-color: transparent; /* Fond transparent */
+  position: relative;
+  top: 100%; /* Placer au milieu */
+  left: 50%; /* Placer au milieu */
+  transform: translate(-50%, -50%); /* Centrer horizontalement et verticalement */
+  text-align: center; /* Centrer le contenu horizontalement */
+  z-index: 2; /* Position au-dessus de la section de la moto */
+  box-shadow: 5px 5px 9px rgba(154, 154, 154, 0.5); /* Ombre */
+  width: 40%;
+}
+
+
+.services {
+  padding: 50px;
+  font-size: 1.2rem;
+}
+
+.services h1{
+  text-align: center;
+  font-size: 3rem;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+.services h3 {
+  text-align: center;
+  color: #FF6262;
+  font-size: 2rem;
+}
+.services .container {
+  display: flex;
+}
+
+/* Styles pour la section de services */
+.services-section {
+  background-color: #ffffff; /* Fond blanc */
+  padding: 50px;
+  text-align: center; /* Centrer le contenu horizontalement */
+}
+
+
+
+/* Styles pour les conteneurs de service */
+.service-container {
+  display: flex; /* Utilisation de flexbox */
+  justify-content: center; /* Espace égal entre les éléments */
+}
+
+/* Styles pour chaque service */
+.service {
+  width: 30%; /* Largeur de chaque service */
+  margin: -60px; /* Réduire l'espace entre les services */
+  margin-top: 20px;
+}
+
+.service img {
+  max-width: 30%; /* Image s'adaptant à la largeur du conteneur */
+}
+
+.service p {
+  margin-top: 10px; /* Marge supérieure pour le texte */
+}
+
+ 
+
+
+
+
+
+
+/* MOTO SELECTION */
+
+.moto {
+  background-color: #000000;
+  padding: 50px;
+}
+
+.moto h1{
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+  
+}
+
+.moto h3 {
+  text-align: center;
+  color: #FF6262;
+  font-size: 2rem;
+}
+
+/* AVIS */
+
+.avis{
+  width: 30%;
+  height: 10%;
+  background-color: white;
+  padding: 15px;
+}
+
+.pp{
+  width: 20%;
+  height: 20%;
+}
+
+.etoiles{
+  width: 40%;
+}
+
+.personne{
+  display: flex;
+  gap: 20px;
+}
+
+.personne p{
+  margin-top: 15px;
+}
+
+
+
+/* Styles de la barre de défilement */
+/* Barre de défilement */
+::-webkit-scrollbar {
+  width: 8px !important; /* Largeur de la barre de défilement */
+}
+
+/* Piste de défilement */
+::-webkit-scrollbar-track {
+  background: #000000 !important; /* Couleur de fond de la piste */
+  background-size: auto 5px; /* Réduire la longueur de la piste à 5 pixels */
+}
+
+
+/* Bouton de défilement */
+::-webkit-scrollbar-thumb {
+  background: #ffffff !important; /* Couleur du bouton de défilement */
+  border-radius: 5px !important; /* Bord arrondi du bouton */
+}
+
+/* Au survol du bouton de défilement */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff !important; /* Couleur de survol du bouton */
+}
+
+
+footer {
+  background-color: #000000;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block; /* Met les éléments côte à côte */
+  margin: 0 10px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+footer h4 {
+  font-size: 1rem;
+  font-family: "Tilt Warp", sans-serif;  
+}
+
+footer p {
+  font-size: 10px; /* Réduit la taille du texte */
+  margin-top: 10px; /* Ajoute un espace entre les liens et le texte */
+  color: #fff;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+
+

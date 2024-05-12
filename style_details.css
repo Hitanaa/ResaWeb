@@ -1,0 +1,384 @@
+*,
+*::before,
+::after {
+    box-sizing: border-box;
+}
+
+.old-standard-tt-regular {
+    font-family: "Old Standard TT", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.old-standard-tt-bold {
+    font-family: "Old Standard TT", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.old-standard-tt-regular-italic {
+    font-family: "Old Standard TT", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.nokora-thin {
+    font-family: "Nokora", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.nokora-light {
+    font-family: "Nokora", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.nokora-regular {
+    font-family: "Nokora", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nokora-bold {
+    font-family: "Nokora", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.nokora-black {
+    font-family: "Nokora", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+
+body {
+    background-color: #000000;
+    margin: 0;
+    /* Ajout d'une marge zéro pour le corps */
+}
+
+header {
+    position: absolute;
+    /* Changement de la position à "fixed" */
+    top: 0;
+    /* Fixation en haut de la fenêtre */
+    width: 100%;
+    z-index: 999;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
+    background-color: #9290907e;
+    list-style-type: none;
+    text-align: center;
+    padding: 20px 30px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-size: 1.2rem;
+}
+
+nav ul li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Nokora", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+nav ul li a:hover {
+    background-color: #00000042;
+    color: #ffffff;
+    border-radius: 50px;
+}
+
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 150px;
+    /* Réduisez cette marge selon vos besoins */
+    margin-bottom: 0px;
+    font-size: 3.5rem;
+    padding-left: 200px;
+    font-family: "Old Standard TT", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.upside {
+    color: white;
+    text-align: center;
+    margin: 0px;
+    /* Réduisez cette marge selon vos besoins */
+    font-size: 3.5rem;
+    padding-left: 200px;
+    transform: rotate(180deg);
+}
+
+button {
+    display: block;
+    margin: 40px auto 0;
+    /* Ajoute une marge de 20px en haut, centre horizontalement */
+    border-radius: 30px;
+    padding: 15px 20px;
+    font-family: "Nokora", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+h2 {
+    color: white;
+    font-family: "Nokora", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 3rem;
+    margin-left: 180px;
+    margin-top: -260px; /* Ajustez cette valeur pour monter le titre */
+    flex: 1; /* Permet à l'en-tête de prendre autant d'espace que possible */
+    word-spacing: 10px;
+    margin-bottom: 50px;
+}
+
+
+.break-line {
+    white-space: nowrap;
+    /* Empêche la séparation des mots */
+    display: block;
+    /* Passe à la ligne */
+}
+
+.special-font {
+    font-family: "Old Standard TT", serif;
+    font-weight: 100;
+    font-style: italic;
+    /* Remplacez "Nom de votre police" par le nom de la police que vous souhaitez utiliser */
+}
+
+.container {
+    display: flex; /* Utilisation de flexbox pour disposer les éléments en ligne */
+    align-items: center; /* Centre les éléments verticalement */
+    position: relative;
+    margin-top: 60px;
+}
+
+
+.transparent {
+    width: 600px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.image-moto {
+    position: absolute; /* Position absolue par rapport au conteneur */
+    bottom: 0; /* Alignement au bas du conteneur */
+    left: 0; /* Alignement à gauche du conteneur */
+    margin-left: 600px;
+    width: 620px;
+}
+
+p {
+    color: white;
+    font-family: "Nokora", sans-serif;
+    font-size: 1.2rem;
+    margin-left: 180px;
+    margin-right: 400px;
+    margin-bottom: 35px;
+    word-spacing: 3px;
+}
+
+
+/* Styles de la barre de défilement */
+/* Barre de défilement */
+::-webkit-scrollbar {
+    width: 8px !important;
+    /* Largeur de la barre de défilement */
+}
+
+/* Piste de défilement */
+::-webkit-scrollbar-track {
+    background: #000000 !important;
+    /* Couleur de fond de la piste */
+    background-size: auto 5px;
+    /* Réduire la longueur de la piste à 5 pixels */
+}
+
+
+/* Bouton de défilement */
+::-webkit-scrollbar-thumb {
+    background: #ffffff !important;
+    /* Couleur du bouton de défilement */
+    border-radius: 5px !important;
+    /* Bord arrondi du bouton */
+}
+
+/* Au survol du bouton de défilement */
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff !important;
+    /* Couleur de survol du bouton */
+}
+
+
+
+.container_wheel {
+    display: flex;
+}
+
+.container_wheel p {
+    margin-right: 0px; /* Ajouter un espacement entre le paragraphe et la div */
+    margin-top: 250px;
+    margin-right: -180px;
+    white-space: pre-wrap; /* Pour conserver les sauts de ligne */
+}
+
+.wheel {
+    margin-top: 150px;
+}
+
+.wheel img {
+    width: 1000px;
+    margin-left: 218px;
+}
+
+
+.container_motor {
+    display: flex;
+    justify-content: space-between; /* Espace les éléments horizontalement */
+    margin-top: 200px;
+}
+
+.motor_text p {
+    color: white;
+    font-family: "Nokora", sans-serif;
+    font-size: 1.2rem;
+    width: 50%; /* Définit une largeur pour le texte */
+    margin-left: 280px;
+    margin-top: 100px;
+    white-space: pre-wrap; /* Pour conserver les sauts de ligne */
+}
+
+
+.motor img {
+    width: 900px; /* Définit la largeur de l'image */
+    margin-right: -200px; /* Décale l'image vers la gauche */
+}
+
+
+.rectangle {
+    position: relative;
+    width: 800px; /* Largeur du conteneur */
+    height: auto; /* Hauteur de votre image */
+    margin: 0 auto; /* Centrage horizontal */
+    margin-top: -50px;
+    margin-bottom: 50px;
+}
+
+.rectangle h3 {
+    position: absolute;
+    top: 50%; /* Positionne le titre au milieu verticalement */
+    left: 50%; /* Positionne le titre au milieu horizontalement */
+    transform: translate(-80%, -50%); /* Centre le titre */
+    margin: 0;
+    margin-right: 50px;
+    color: white; /* Couleur du texte */
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour le titre */
+    padding: 10px; /* Espacement autour du titre */
+    line-height: 1.4;
+}
+
+.rectangle img {
+    display: block;
+    width: 90%; /* Utilise toute la largeur du conteneur */
+    height: auto; /* Ajuste la hauteur en conséquence */
+    margin: 0 auto; /* Centrage horizontal */
+}
+
+.button_bottom {
+    display: block;
+    margin: 40px auto 0;
+    /* Ajoute une marge de 20px en haut, centre horizontalement */
+    border-radius: 30px;
+    padding: 15px 20px;
+    font-family: "Nokora", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2rem;
+    margin-top: -165px;
+    margin-right: 480px;
+    margin-bottom: 100px;
+}
+
+
+
+
+
+footer {
+    background-color: #000000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline-block;
+    /* Met les éléments côte à côte */
+    margin: 0 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+footer h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    font-family: "Tilt Warp", sans-serif;
+}
+
+footer p {
+    font-size: 10px;
+    /* Réduit la taille du texte */
+    margin-top: 10px;
+    /* Ajoute un espace entre les liens et le texte */
+    color: #fff;
+    text-align: center;
+    margin: 0 auto; /* Ajout de la propriété pour centrer le texte */
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #ffffff;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

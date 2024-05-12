@@ -1,0 +1,237 @@
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+}
+
+.sedgwick-ave-display-regular {
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tilt-warp-uniquifier {
+  font-family: "Tilt Warp", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+}
+
+body {
+  background-color: #000000;
+  margin: 0;
+  /* Ajout d'une marge zéro pour le corps */
+}
+
+header {
+  position: absolute;
+  /* Changement de la position à "fixed" */
+  top: 0;
+  /* Fixation en haut de la fenêtre */
+  width: 100%;
+  z-index: 999;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: fit-content;
+  margin: auto;
+  background-color: #ffffff4e;
+  list-style-type: none;
+  text-align: center;
+  padding: 20px 30px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  font-size: 1.2rem;
+}
+
+nav ul li a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #000000;
+  font-family: "Tilt Warp", sans-serif;
+}
+
+nav ul li a:hover {
+  background-color: #00000042;
+  color: #ffffff;
+  border-radius: 50px;
+}
+
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Sedgwick Ave Display", cursive;
+  color: white;
+  margin-top: 150px;
+  margin-bottom: 80px;
+}
+
+h2 {  
+  margin-left: 200px;
+  padding-top: 50px;
+  font-size: 1.8rem;
+  font-family: "Tilt Warp", sans-serif;
+  color: white;
+}
+
+p {
+  padding-bottom: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+  font-size: 1.3rem;
+  color: white;
+}
+
+h3 {
+  margin-left: 200px;
+  font-family: "Tilt Warp", sans-serif;
+  color: white;
+  font-size: 1.3rem;
+}
+
+h3::before {
+  content: "·";
+  /* Utilise le caractère "·" comme contenu */
+  margin-right: 5px;
+  /* Ajoute un espace entre le point et le texte */
+}
+
+
+.garantie p {
+  margin-bottom: 10px;
+}
+
+.garantie h2 {
+  margin-bottom: 0;
+}
+
+
+/* Styles de la barre de défilement */
+/* Barre de défilement */
+::-webkit-scrollbar {
+  width: 8px !important;
+  /* Largeur de la barre de défilement */
+}
+
+/* Piste de défilement */
+::-webkit-scrollbar-track {
+  background: #000000 !important;
+  /* Couleur de fond de la piste */
+  background-size: auto 5px;
+  /* Réduire la longueur de la piste à 5 pixels */
+}
+
+
+/* Bouton de défilement */
+::-webkit-scrollbar-thumb {
+  background: #ffffff !important;
+  /* Couleur du bouton de défilement */
+  border-radius: 5px !important;
+  /* Bord arrondi du bouton */
+}
+
+/* Au survol du bouton de défilement */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff !important;
+  /* Couleur de survol du bouton */
+}
+
+
+footer {
+  background-color: #000000;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+  /* Met les éléments côte à côte */
+  margin: 0 10px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+footer h4 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  font-family: "Tilt Warp", sans-serif;
+}
+
+footer p {
+  font-size: 10px;
+  /* Réduit la taille du texte */
+  margin-top: 10px;
+  /* Ajoute un espace entre les liens et le texte */
+  color: #fff;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.contact-info-left {
+  width: calc(50% - 10px);
+}
+
+.contact-info-left p {
+  margin: 50px;
+}
+
+.map-responsive {
+  width: calc(50% - 10px);
+  overflow: hidden;
+  position: relative;
+  padding-top: 56.25%; /* Aspect ratio 16:9 */
+}
+
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

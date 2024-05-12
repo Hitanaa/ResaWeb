@@ -1,0 +1,244 @@
+*,
+*::before,
+::after {
+    box-sizing: border-box;
+}
+
+.sedgwick-ave-display-regular {
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tilt-warp-uniquifier {
+  font-family: "Tilt Warp", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+}
+
+body {
+  background-color: #000000;
+  margin: 0; /* Ajout d'une marge zéro pour le corps */
+}
+
+header {
+  position: absolute; /* Changement de la position à "fixed" */
+  top: 0; /* Fixation en haut de la fenêtre */
+  width: 100%;
+  z-index: 999;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: fit-content;
+  margin: auto;
+  background-color: #ffffff4e;
+  list-style-type: none;
+  text-align: center;
+  padding: 20px 30px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  font-size: 1.2rem;
+}
+
+nav ul li a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #000000;
+  font-family: "Tilt Warp", sans-serif;
+}
+
+nav ul li a:hover {
+  background-color: #00000042;
+  color: #ffffff;
+  border-radius: 50px;
+}
+
+
+.timeline {
+  margin: 5em auto;
+  max-width: 34.15em;
+}
+
+.checkpoint {
+  max-width: 34em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  position: relative;
+}
+.checkpoint div {
+  border: 2px solid #888;
+  border-radius: 1em;
+  padding: 1.5em;
+}
+.checkpoint p {
+  line-height: 27px;
+  color: #ccc;
+}
+.checkpoint h2 {
+  color: #fff;
+}
+.checkpoint:nth-child(odd){
+  border-left: 3px solid #fff;
+  padding-left: 3em;
+  transform: translateX(16.8em);
+}
+.checkpoint:nth-child(even){
+  border-right: 3px solid #fff;
+  padding-right: 3em;
+  transform: translateX(-17em);
+}
+.checkpoint:nth-child(odd)::before,
+.checkpoint:nth-child(even)::before {
+  content: '';
+  background: #888;
+  width: 3em;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.checkpoint:nth-child(odd)::before{
+  left: 0;
+}
+.checkpoint:nth-child(even)::before {
+  right: 0;
+}
+
+.checkpoint:nth-child(odd) div::before,
+.checkpoint:nth-child(even) div::before {
+  content: '';
+  background: #fff;
+  box-shadow: 0 0 0.5em #0d71fc;
+  width: 0.8em;
+  height: 0.8em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+.checkpoint:nth-child(odd) div::before{
+  left: -0.5em;
+}
+.checkpoint:nth-child(even) div::before{
+  right: -0.5em;
+}
+
+@media screen and (max-width: 1150px) {
+  .timeline {
+    width: 80vw;
+  }
+  .timeline .checkpoint {
+    width: 100%;
+    transform: none;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+  }
+  .timeline .checkpoint::before {
+    width: 3px;
+    height: 4em;
+    top: -2em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .timeline .checkpoint div::before {
+    top: -0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+}
+
+
+
+/* Styles de la barre de défilement */
+/* Barre de défilement */
+::-webkit-scrollbar {
+  width: 8px !important; /* Largeur de la barre de défilement */
+}
+
+/* Piste de défilement */
+::-webkit-scrollbar-track {
+  background: #000000 !important; /* Couleur de fond de la piste */
+  background-size: auto 5px; /* Réduire la longueur de la piste à 5 pixels */
+}
+
+
+/* Bouton de défilement */
+::-webkit-scrollbar-thumb {
+  background: #ffffff !important; /* Couleur du bouton de défilement */
+  border-radius: 5px !important; /* Bord arrondi du bouton */
+}
+
+/* Au survol du bouton de défilement */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff !important; /* Couleur de survol du bouton */
+}
+
+
+
+footer {
+  background-color: #000000;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block; /* Met les éléments côte à côte */
+  margin: 0 10px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+footer h4 {
+  font-size: 1rem;
+  font-family: "Tilt Warp", sans-serif;  
+}
+
+footer p {
+  font-size: 10px; /* Réduit la taille du texte */
+  margin-top: 10px; /* Ajoute un espace entre les liens et le texte */
+  color: #fff;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
