@@ -1,0 +1,239 @@
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: url('Images/fond2.png') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+}
+
+/* Fonts */
+
+.old-standard-tt-regular {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.old-standard-tt-bold {
+  font-family: "Old Standard TT", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.old-standard-tt-regular-italic {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.nokora-thin {
+  font-family: "Nokora", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.nokora-light {
+  font-family: "Nokora", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.nokora-regular {
+  font-family: "Nokora", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nokora-bold {
+  font-family: "Nokora", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.nokora-black {
+  font-family: "Nokora", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.special-font {
+  font-family: "Old Standard TT", serif;
+  font-weight: 100;
+  font-style: italic;
+  /* Remplacez "Nom de votre police" par le nom de la police que vous souhaitez utiliser */
+}
+
+/* Nav Bar */
+
+header {
+  position: absolute;
+  /* Changement de la position à "fixed" */
+  top: 0;
+  /* Fixation en haut de la fenêtre */
+  width: 100%;
+  z-index: 999;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: fit-content;
+  margin: auto;
+  background-color: #ffffff;
+  list-style-type: none;
+  text-align: center;
+  padding: 20px 30px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  font-size: 1.2rem;
+}
+
+nav ul li a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #000000;
+  font-family: "Nokora", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+nav ul li a:hover {
+  background-color: #00000042;
+  color: #ffffff;
+  border-radius: 50px;
+}
+
+/* ScrollBar */
+
+::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000 !important;
+  background-size: auto 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff !important;
+  border-radius: 5px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff !important;
+}
+
+/* Mentions Légales / Contacts */
+
+footer {
+  background: url('Images/fond2.png') no-repeat center center fixed;
+  background-size: cover;
+  padding: 80px 0;
+  text-align: center;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+footer h4 {
+  font-size: 1rem;
+  font-family: "Nokora", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+footer p {
+  font-size: 10px;
+  margin-top: 5px;
+  color: #fff;
+  margin: 0;
+}
+
+/* Animation underline footer */
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* --- Bouton top / navbar scroll smooth --- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- bouton pour le top --- */
+.btn-top {
+
+  /* Position toujours fixé au même endroit lorsque la page défile */
+  position: fixed;
+
+  /* A droite */
+  right: 0;
+
+  /* En bas */
+  bottom: 0;
+
+  /* Créer un espace supplémentaire à l'intérieur d'un élément */
+  padding: 15px;
+
+  /* Marge sur chaque côté de l'élèment */
+  margin: 20px;
+
+  /* Définition du pointeur lorsque la sourie est sur l'élèment */
+  cursor: pointer;
+
+  /* Attribut de présentation qui définit la couleur de remplissage du cercle */
+  fill: #ffffff;
+
+  /* Détermine l'ordre des différentes couches que formeront les éléments */
+  z-index: 1;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh; /* ou la hauteur que vous voulez pour votre conteneur */
+}
+
+.logo {
+  margin-top: 35px;
+  width: 100px;
+}

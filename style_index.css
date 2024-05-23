@@ -1,0 +1,192 @@
+/* Styles pour la section de la moto */
+.moto-section {
+  background-color: #000000; /* Fond noir */
+  color: #ffffff; /* Couleur de texte blanc */
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative; /* Ajoutez cette propriété pour positionner le texte */
+}
+
+.moto-section video {
+  width: 100%;
+  max-height: 100%;
+  margin-top: 50px;
+  animation: opacityAnimation 5s infinite alternate; /* Durée et comportement de l'animation */
+}
+
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0.5; /* Opacité initiale */
+  }
+  100% {
+    opacity: 0.1; /* Opacité finale */
+  }
+}
+
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.overlay h1 {
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Old Standard TT", serif;
+    font-weight: 700;
+    font-style: normal;
+  margin-right: 50px;
+  /* Ajoutez d'autres styles CSS selon vos préférences */
+}
+
+.upside {
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Old Standard TT", serif;
+  font-weight: 700;
+  font-style: normal;
+  position: absolute;
+  top: 120%;
+  left: 46%;
+  margin-left: 50px;
+  transform: translate(-50%, -50%) rotateY(180deg); /* Transformation pour effet miroir */
+}
+
+.overlay h1::after {
+  content: "";
+  position: absolute;
+  width: 500px; /* Largeur de la ligne blanche */
+  height: 2px; /* Hauteur de la ligne blanche */
+  background-color: white;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.overlay h1:first-child::after {
+  right: -550px; /* Positionnement de la ligne blanche à droite du premier h1 */
+  top: 40px;
+}
+
+.overlay h1:last-child::after {
+  left: 530px; /* Positionnement de la ligne blanche à gauche du deuxième h1 */
+  top: 40px;
+}
+
+.container img {
+  width: 300px;
+}
+
+.description {
+  background: url('Images/fond2.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.ligne-blanche {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff56; /* Couleur blanche */
+}
+
+.description h2 {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-family: "Nokora", sans-serif;
+  font-weight: 900;
+  font-style: bold;
+  margin-bottom: 50px;
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+
+.description p {
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Nokora", sans-serif;
+  margin: auto;
+  line-height: 2.2rem;
+  width: 55%; /* Limite la largeur */
+}
+
+p {
+  margin-bottom: 2px;
+}
+
+
+/* MOTO SELECTION */
+
+.moto {
+  background: url('Images/fond2.png') no-repeat center center fixed;
+  background-size: cover;
+  padding: 50px;
+}
+
+.moto h3 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 3rem;
+  font-family: "Nokora", sans-serif;
+  font-weight: 900;
+  font-style: bold;
+  margin-bottom: 100px;
+  margin-top: 120px;
+}
+
+/* AVIS */
+
+section.comment {
+  background: url('Images/fond2.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.comment h3 {
+  padding: 100px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 3rem;
+  font-family: "Nokora", sans-serif;
+  font-weight: 900;
+  font-style: bold;
+  margin-bottom: 30px;
+}
+
+.avis{
+  width: 30%;
+  height: 10%;
+  background-size: cover;
+  padding: 15px;
+}
+
+.pp{
+  width: 20%;
+  height: 20%;
+}
+
+.etoiles{
+  width: 40%;
+}
+
+.personne{
+  display: flex;
+  gap: 20px;
+}
+
+.personne p{
+  margin-top: 15px;
+}
+
+
+

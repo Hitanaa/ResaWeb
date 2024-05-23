@@ -1,0 +1,249 @@
+h1 {
+    padding-top: 80px;
+    text-align: center;
+    color: white;
+    font-family: "Nokora", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 3rem;
+}
+
+.debut {
+    color: #ffffff; /* Couleur rouge-orangé */
+    font-family: "Nokora", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 25px;
+    margin-right: 150px ;
+}
+
+.retour {
+    color: #ffffff; /* Couleur rouge-orangé */
+    font-family: "Nokora", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 25px;
+    margin-right: 140px ;
+}
+
+.special-font {
+    font-family: "Old Standard TT", serif;
+    font-style: italic;
+}
+
+.background-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.left-image,
+.right-image {
+    position: absolute;
+    width: 400px; /* Ajustez la taille selon vos besoins */
+    height: auto;
+}
+
+.left-image {
+    left: 0;
+    top: 80%;
+}
+
+.right-image {
+    right: 0;
+    bottom: 30%;
+}
+
+
+
+.overlay {
+    background-color: #3a3a3a69; /* Couleur avec 75% d'opacité */
+    width: 60vh; /* Carré avec une largeur de 50% de la hauteur de la fenêtre */
+    height: 90vh; /* Carré avec une hauteur de 50% de la hauteur de la fenêtre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    margin: auto;
+    border: 2px solid white;
+}
+
+.circle2 {
+    width: 20px; /* Diamètre du cercle */
+    height: 20px; /* Diamètre du cercle */
+    background-color: rgba(255, 255, 255, 0.323); /* Couleur blanche */
+    border-radius: 50%; /* Pour créer un cercle */
+    position: absolute; /* Position absolue pour les superposer */
+    top: 40%; /* À mi-chemin verticalement */
+    left: 51.7%; /* À mi-chemin horizontalement */
+    transform: translate(-50%, -50%); /* Pour le centrer */
+}
+
+.circle {    
+    width: 20px; /* Diamètre du cercle */
+    height: 20px; /* Diamètre du cercle */
+    background-color: white; /* Couleur blanche */
+    border-radius: 50%; /* Pour créer un cercle */
+    position: absolute; /* Position absolue pour les superposer */
+    top: 40%; /* À mi-chemin vertical3ment */
+    left: 48.4%; /* À mi-chemin horizontalement */
+    transform: translate(-50%, -50%); /* Pour le centrer */
+    width: 20px; /* Diamètre du deuxième cercle */
+    height: 20px; /* Diamètre du deuxième cercle */
+}
+
+.circle4 {
+    width: 20px; /* Diamètre du cercle */
+    height: 20px; /* Diamètre du cercle */
+    background-color: rgb(255, 255, 255); /* Couleur blanche */
+    border-radius: 50%; /* Pour créer un cercle */
+    position: absolute; /* Position absolue pour les superposer */
+    top: 42%; /* À mi-chemin verticalement */
+    left: 51.7%; /* À mi-chemin horizontalement */
+    transform: translate(-50%, -50%); /* Pour le centrer */
+}
+
+.circle3 {    
+    width: 20px; /* Diamètre du cercle */
+    height: 20px; /* Diamètre du cercle */
+    background-color: rgba(255, 255, 255, 0.323); /* Couleur blanche */
+    border-radius: 50%; /* Pour créer un cercle */
+    position: absolute; /* Position absolue pour les superposer */
+    top: 42%; /* À mi-chemin vertical3ment */
+    left: 48.4%; /* À mi-chemin horizontalement */
+    transform: translate(-50%, -50%); /* Pour le centrer */
+    width: 20px; /* Diamètre du deuxième cercle */
+    height: 20px; /* Diamètre du deuxième cercle */
+}
+
+
+.form-container {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.form-group input[type="text"] {
+    width: 46%; /* Ajustement pour la taille */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 80px;
+    border: 2px solid white; /* Ajout d'une bordure blanche */
+    background-color: transparent; /* Suppression du fond blanc */
+    color: white;
+}
+
+
+.form-group input[type="email"] {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid white; /* Ajout d'une bordure blanche */
+    background-color: transparent; /* Suppression du fond blanc */
+    color: white;
+}
+
+.name-moto {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    
+}
+
+/* Styles spécifiques au déroulement */
+.moto {
+    margin: 0 auto 20px; /* Centrage horizontal et ajout de marge en bas */
+    width: fit-content; /* Ajustement de la largeur au contenu */
+    text-align: center; /* Centrage du texte à l'intérieur */
+    
+}
+/* Style du titre */
+.moto h2 {
+    color: #ffffff; /* Couleur rouge-orangé */
+    font-family: "Nokora", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+
+/* Style du déroulement */
+#name-moto {
+    font-size: 1rem; /* Taille de police agrandie */
+    padding: 8px; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis */
+    background-color: #fff; /* Fond blanc */
+    color: #000000; /* Couleur noire */
+    font-family: "Nokora", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.form-group input[type="submit"] {
+    width: 35%;
+    padding: 10px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    border: none;
+    margin: auto;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: "Nokora", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.calendar {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid white; /* Ajout d'une bordure blanche */
+}
+
+.calendar select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: rgb(100, 100, 100);
+    background-color: transparent; /* Suppression du fond blanc */
+}
+
+.container_name {
+    display: flex;
+    align-items: center;
+    color: #000000;
+
+}
+.name h2 {
+    display: inline-block;
+    margin-right: 10px; /* Espacement entre les éléments */
+    
+}

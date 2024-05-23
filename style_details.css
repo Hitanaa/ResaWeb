@@ -1,0 +1,202 @@
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 150px;
+    /* Réduisez cette marge selon vos besoins */
+    margin-bottom: 0px;
+    font-size: 3.5rem;
+    padding-left: 200px;
+    font-family: "Old Standard TT", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.upside {
+    color: white;
+    text-align: center;
+    margin: 0px;
+    /* Réduisez cette marge selon vos besoins */
+    font-size: 3.5rem;
+    padding-left: 200px;
+    transform: rotate(180deg);
+}
+
+.button-top {
+    display: block;
+    margin: auto;
+    /* Ajoute une marge de 20px en haut, centre horizontalement */
+    border-radius: 30px;
+    text-align: center;
+    padding: 15px 20px;
+    font-family: "Nokora", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2rem;
+    margin-top: 50px;
+}
+
+.button-top a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7b0000;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button-top a:hover {
+    background-color: #ffffff;
+    color: #7b0000;
+}
+
+
+
+h2 {
+    color: white;
+    font-family: "Nokora", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 3rem;
+    margin-left: 180px;
+    margin-top: -260px; /* Ajustez cette valeur pour monter le titre */
+    flex: 1; /* Permet à l'en-tête de prendre autant d'espace que possible */
+    word-spacing: 10px;
+    margin-bottom: 50px;
+}
+
+
+.break-line {
+    white-space: nowrap;
+    /* Empêche la séparation des mots */
+    display: block;
+    /* Passe à la ligne */
+}
+
+.container {
+    display: flex; /* Utilisation de flexbox pour disposer les éléments en ligne */
+    align-items: center; /* Centre les éléments verticalement */
+    position: relative;
+    margin-top: 60px;
+}
+
+
+.transparent {
+    width: 600px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.image-moto {
+    position: absolute; /* Position absolue par rapport au conteneur */
+    bottom: 0; /* Alignement au bas du conteneur */
+    left: 0; /* Alignement à gauche du conteneur */
+    margin-left: 600px;
+    width: 620px;
+}
+
+p {
+    color: white;
+    font-family: "Nokora", sans-serif;
+    font-size: 1.2rem;
+    margin-left: 180px;
+    margin-right: 400px;
+    margin-bottom: 35px;
+    word-spacing: 3px;
+}
+
+
+.container_wheel {
+    display: flex;
+}
+
+.container_wheel p {
+    margin-right: 0px; /* Ajouter un espacement entre le paragraphe et la div */
+    margin-top: 250px;
+    margin-right: -180px;
+    white-space: pre-wrap; /* Pour conserver les sauts de ligne */
+}
+
+.wheel {
+    margin-top: 150px;
+}
+
+.wheel img {
+    width: 1000px;
+    margin-left: 218px;
+}
+
+
+.container_motor {
+    display: flex;
+    justify-content: space-between; /* Espace les éléments horizontalement */
+    margin-top: 200px;
+}
+
+.motor_text p {
+    color: white;
+    font-family: "Nokora", sans-serif;
+    font-size: 1.2rem;
+    width: 50%; /* Définit une largeur pour le texte */
+    margin-left: 280px;
+    margin-top: 100px;
+    white-space: pre-wrap; /* Pour conserver les sauts de ligne */
+}
+
+
+.motor img {
+    width: 900px; /* Définit la largeur de l'image */
+    margin-right: -200px; /* Décale l'image vers la gauche */
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #000;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.button-container h3 {
+    font-size: 1.2rem;
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+.button-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7b0000;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button-container a:hover {
+    background-color: #ffffff;
+    color: #7b0000;
+}
+
+

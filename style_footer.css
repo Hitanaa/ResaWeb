@@ -1,0 +1,89 @@
+.sedgwick-ave-display-regular {
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Sedgwick Ave Display", cursive;
+  color: white;
+  margin-top: 150px;
+  margin-bottom: 80px;
+}
+
+h2 {  
+  margin-left: 200px;
+  padding-top: 50px;
+  font-size: 1.8rem;
+  font-family: "Nokora", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  color: white;
+}
+
+p {
+  padding-bottom: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+  font-size: 1.3rem;
+  color: white;
+  font-family: "Nokora", sans-serif;
+}
+
+h3 {
+  margin-left: 200px;
+  font-family: "Nokora", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  color: white;
+  font-size: 1.3rem;
+}
+
+h3::before {
+  content: "·";
+  /* Utilise le caractère "·" comme contenu */
+  margin-right: 5px;
+  /* Ajoute un espace entre le point et le texte */
+}
+
+
+.garantie p {
+  margin-bottom: 10px;
+}
+
+.garantie h2 {
+  margin-bottom: 0;
+}
+
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.contact-info-left {
+  width: calc(50% - 10px);
+}
+
+.contact-info-left p {
+  margin: 50px;
+}
+
+.map-responsive {
+  width: calc(50% - 10px);
+  overflow: hidden;
+  position: relative;
+  padding-top: 56.25%; /* Aspect ratio 16:9 */
+}
+
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
