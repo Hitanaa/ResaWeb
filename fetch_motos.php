@@ -27,7 +27,7 @@ if ($recipesStatement->rowCount() > 0) {
                   <div class="card">
                     <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light" data-mdb-ripple-color="light">
                       <img src="../resaweb/'.$recipe['img'].'" class="w-100" />
-                      <a href="../resaweb/details.html?id='.$recipe['id'].'">
+                      <a href="../resaweb/details.php?id='.$recipe['id'].'">
                         <div class="mask">
                           <div class="d-flex justify-content-start align-items-end h-100">
                             <h5><span class="badge bg-primary ms-2">New</span></h5>
