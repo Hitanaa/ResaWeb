@@ -53,6 +53,16 @@ $images = $ImagemotosStatement->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
+
+<meta name="description" content="Plus de détails" />
+
+<!-- --- Bouton pour revenir à la page d'accueil du site --- -->
+<a class="btn-top" href="#top">
+        <svg src="img/direction.svg" width="24" height="20">
+            <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"></path>
+        </svg>
+    </a>
+
   <!-- ----------- Nav Bar ----------- -->
   <header>
     <nav>

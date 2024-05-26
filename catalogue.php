@@ -28,6 +28,8 @@
 
 <body>
 
+<meta name="description" content="Catalogue" />
+
 <!-- --- Bouton pour revenir à la page d'accueil du site --- -->
 <a class="btn-top" href="#top">
         <svg src="img/direction.svg" width="24" height="20">
@@ -61,8 +63,8 @@
         <label for="selectOption">Filtre</label>
         <select name="tri" id="tri">
             <option value="default" selected>Aucun</option>
-            <option value="date_asc">Prix décroissant</option>
-            <option value="date_desc">Prix croissant</option>
+            <option value="date_asc">Prix croissant</option>
+            <option value="date_desc">Prix décroissant</option>
         </select>
     </div>
 

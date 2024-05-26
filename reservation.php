@@ -19,12 +19,10 @@ $idMoto = $_REQUEST['id'];
 
     <!-- Fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nokora:wght@100;300;400;700;900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
 
     <!-- Favicon  -->
     <link rel="icon" href="Images/favicon.ico">
@@ -34,6 +32,9 @@ $idMoto = $_REQUEST['id'];
 </head>
 
 <body>
+
+<meta name="description" content="Réservation" />
+
     <!-- ----------- Nav Bar ----------- -->
     <header>
         <nav>
@@ -51,7 +52,11 @@ $idMoto = $_REQUEST['id'];
         <div class="circle2"></div>
         <div class="circle"></div>
         <div class="form-container">
-            <form action="<?php echo 'recap.php?id='.$idMoto; ?>" method="post">
+        <form id="reservationForm" action="<?php echo 'recap.php?id='.$idMoto; ?>" method="post">
+
+            <!-- <fieldset>
+                <legend>Informations personnelles</legend> -->
+
                 <div class="form-group">
                     <input type="text" name="prenom" placeholder="Prénom" required>
                     <input type="text" name="nom" placeholder="Nom" required>
@@ -60,6 +65,11 @@ $idMoto = $_REQUEST['id'];
                 <div class="form-group">
                     <input type="email" name="email" placeholder="Email" required></textarea>
                 </div>
+
+                <!-- </fieldset>
+
+                <fieldset>
+                <legend>Date de début</legend> -->
 
                 <h2 class="debut">DATE DE DÉBUT</h2>
 
@@ -94,6 +104,11 @@ $idMoto = $_REQUEST['id'];
                         ?>
                     </select>
                 </div>
+
+                </fieldset>
+
+                <!-- <fieldset>
+                <legend>Date de retour</legend> -->
 
                 <h2 class="retour">DATE DE RETOUR</h2>
 
@@ -155,18 +170,31 @@ $idMoto = $_REQUEST['id'];
                         }
                     }
                     ?>
+
+                <!-- </fieldset>
+
+                <fieldset>
+                <legend>Options supplémentaires</legend> -->
+
                 <div class="moto">
-                    <h2>UNE DEUXIÈME MOTO ?</h2>
-                    <select id="name-moto" name="nameMoto2">
+                   <h2>UNE DEUXIÈME MOTO ?</h2>
+                   <select id="name-moto" name="nameMoto2">
+
                         <option value="all">Aucune</option>
-                        <option value="john">Émeraude</option>
-                        <option value="emma">Améthyste</option>
-                        <option value="alex">Aigue-marine</option>
-                        <option value="sarah">Onyx</option>
-                        <option value="michael">Saphir</option>
-                        <option value="lisa">Diamant</option>
+
+                        <optgroup label="Moto">
+                            <option>Améthyste</option>
+                            <option>Diamant</option>
+                            <option>Onyx</option>
+                            <option>Opale</option>
+                            <option>Quartz</option>
+                            <option>Saphir</option>
+                        </optgroup>
                     </select>
                 </div>
+
+                
+                <!-- </fieldset> -->
 
                 <div class="form-group">
                     <input type="submit" value="RÉSERVER" />;
@@ -188,6 +216,7 @@ $idMoto = $_REQUEST['id'];
 
 <!-- Librairy -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script_reservation.js"></script>
 
 </body>
 

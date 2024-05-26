@@ -35,6 +35,8 @@
 
 <body>
 
+<meta name="description" content="Page d'accueil" />
+
 <!-- --- Bouton pour revenir à la page d'accueil du site --- -->
 <a class="btn-top" href="#top">
         <svg src="img/direction.svg" width="24" height="20">
@@ -76,7 +78,7 @@
 Nous vous offrons un <b>accès privilégié</b> à des machines d'exception, prêtes à répondre à <b>vos désirs</b> de conduite les plus <b>exigeants</b>. </p> <br>
 <p data-aos="fade-down"
       data-aos-easing="linear"
-      data-aos-duration="700">Laissez-nous vous guider vers des <b>horizons inexplorés</b> avec un <b>frisson exceptionnel</b>.</p> <br>
+      data-aos-duration="700">Laissez-nous vous guider vers des <b>horizons inexplorés</b> avec un <b>frisson exceptionnel</b>, que vous soyez <b>amateurs</b> ou <b>passionnés</b>.</p> <br>
 <p data-aos="fade-down"
       data-aos-easing="linear"
       data-aos-duration="800">Votre <b>aventure commence ici</b>.</p> <br> 

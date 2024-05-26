@@ -34,6 +34,8 @@
 
 <body>
 
+<meta name="description" content="À propos" />
+
 <!-- ----------- Nav Bar ----------- -->
 <header>
     <nav>
