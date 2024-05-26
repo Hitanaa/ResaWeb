@@ -70,12 +70,6 @@ $images = $ImagemotosStatement->fetchAll(PDO::FETCH_ASSOC);
     <h1 class="upside">DIAMANT</h1>
   </div>
 
-  <!-- ----------- Bouton réserver ----------- -->
-  <div class="button-container">
-  <?php
-     echo '<a href="reservation.php?id='.$idMoto.'">RÉSERVER</a>';
-     ?>
-  </div>
 
   <!-- ----------- Texte présentation de la moto ----------- -->
   <div class="container">

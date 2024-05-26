@@ -101,7 +101,7 @@ p {
     font-family: "Nokora", sans-serif;
     font-size: 1.2rem;
     margin-left: 180px;
-    margin-right: 600px;
+    margin-right: 500px;
     margin-bottom: 35px;
     word-spacing: 3px;
 }
@@ -123,7 +123,7 @@ p {
 }
 
 .wheel img {
-    width: 1000px;
+    width: 850px;
     margin-left: 218px;
 }
 
@@ -138,14 +138,15 @@ p {
     font-family: "Nokora", sans-serif;
     font-size: 1.2rem;
     width: 50%; /* Définit une largeur pour le texte */
-    margin-left: 350px;
+    margin-left: 300px;
     margin-top: 100px;
+    margin-bottom: 200px;
     white-space: pre-wrap; /* Pour conserver les sauts de ligne */
 }
 
 
 .motor img {
-    width: 900px; /* Définit la largeur de l'image */
+    width: 850px; /* Définit la largeur de l'image */
     margin-right: -200px; /* Décale l'image vers la gauche */
 }
 

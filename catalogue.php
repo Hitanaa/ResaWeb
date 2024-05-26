@@ -58,11 +58,11 @@
 
     <h2 class="sentence">UNE <span class="special-font">MOTO</span> INCROYABLE POUR UNE <span class="special-font">ODYSSÉE</span> INOUBLIABLE</h2>
     <div class="filtre">
-        <label for="selectOption">Choose an option:</label>
+        <label for="selectOption">Filtre</label>
         <select name="tri" id="tri">
-            <option value="default" selected>Choose an option</option>
-            <option value="date_asc">Option 1</option>
-            <option value="date_desc">Option 2</option>
+            <option value="default" selected>Aucun</option>
+            <option value="date_asc">Prix décroissant</option>
+            <option value="date_desc">Prix croissant</option>
         </select>
     </div>
 
