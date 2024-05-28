@@ -1,0 +1,109 @@
+h1 {
+    padding-top: 80px;
+    text-align: center;
+    color: white;
+    font-family: "Nokora", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 3rem;
+}
+h2 {
+    text-align: center;
+    color: white;
+    font-family: "Nokora", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1.4rem;
+    margin-top: 80px;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    font-family: "Nokora", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1.4rem;
+}
+
+.special-font {
+    font-family: "Old Standard TT", serif;
+    font-style: italic;
+}
+
+.container {
+    color: #fff;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    padding: 20px; /* ajout de padding pour l'espace intérieur */
+}
+
+.info {
+    display: flex;
+    flex-direction: column; /* Pour empiler les éléments verticalement */
+    align-items: center; /* Pour centrer les éléments horizontalement */
+}
+
+.name-container {
+    display: flex;
+    flex-direction: row; /* Pour mettre les éléments sur une même ligne */
+    justify-content: space-between; /* Pour les espacer */
+    width: 100%; /* Pour que le conteneur occupe toute la largeur */
+    margin-bottom: 5px;
+}
+
+.info p {
+    margin: 5px 0; /* Espacement entre les éléments */
+    font-family: "Nokora", sans-serif;
+    font-style: normal;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.moto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #444;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.btn-confirm {
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+.info-container {
+    display: flex;
+    align-items: center; /* Pour aligner les éléments verticalement */
+}
+
+.text-info {
+    flex: 1; /* Pour que le texte prenne tout l'espace disponible */
+    text-align: left;
+    margin-right: 50px;
+    font-family: "Nokora", sans-serif;
+    font-style: normal;
+    font-size: 0.9rem;
+    margin-right: auto;
+}
+
+.info-image {
+    margin-right: -40px; /* Espace entre les dates et l'image */
+    width: 140px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+

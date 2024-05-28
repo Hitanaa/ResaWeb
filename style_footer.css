@@ -4,6 +4,7 @@
   font-style: normal;
 }
 
+
 h1 {
   text-align: center;
   font-size: 3rem;
@@ -48,42 +49,41 @@ h3::before {
   /* Ajoute un espace entre le point et le texte */
 }
 
-
-.garantie p {
-  margin-bottom: 10px;
-}
-
-.garantie h2 {
-  margin-bottom: 0;
-}
-
-
+/* Styles for contact information */
 .contact-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.contact-info-left {
-  width: calc(50% - 10px);
+.contact-info  {
+  margin: auto;
 }
 
-.contact-info-left p {
-  margin: 50px;
+.contact-info p {
+  line-height: 1.6;
 }
 
+.contact-info-left p strong {
+  font-weight: bold;
+}
+
+/* Styles for map */
 .map-responsive {
-  width: calc(50% - 10px);
   overflow: hidden;
+  padding-bottom: 56.25%;
   position: relative;
-  padding-top: 56.25%; /* Aspect ratio 16:9 */
+  height: 0;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 .map-responsive iframe {
-  position: absolute;
-  top: 0;
   left: 0;
-  width: 100%;
+  top: 0;
   height: 100%;
+  width: 100%;
+  position: absolute;
 }
+
+
+

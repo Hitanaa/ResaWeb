@@ -66,7 +66,7 @@ h1 {
 .overlay {
     background-color: #3a3a3a69; /* Couleur avec 75% d'opacité */
     width: 60vh; /* Carré avec une largeur de 50% de la hauteur de la fenêtre */
-    height: 90vh; /* Carré avec une hauteur de 50% de la hauteur de la fenêtre */
+    height: 105vh; /* Carré avec une hauteur de 50% de la hauteur de la fenêtre */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,7 +140,7 @@ h1 {
     width: 46%; /* Ajustement pour la taille */
     padding: 10px;
     border-radius: 5px;
-    margin-top: 80px;
+    margin-top: 60px;
     border: 2px solid white; /* Ajout d'une bordure blanche */
     background-color: transparent; /* Suppression du fond blanc */
     color: white;
@@ -172,7 +172,7 @@ h1 {
 
 /* Styles spécifiques au déroulement */
 .moto {
-    margin: 0 auto 20px; /* Centrage horizontal et ajout de marge en bas */
+    margin: 80px auto 20px; /* Centrage horizontal et ajout de marge en bas */
     width: fit-content; /* Ajustement de la largeur au contenu */
     text-align: center; /* Centrage du texte à l'intérieur */
     
@@ -236,14 +236,3 @@ h1 {
     background-color: transparent; /* Suppression du fond blanc */
 }
 
-.container_name {
-    display: flex;
-    align-items: center;
-    color: #000000;
-
-}
-.name h2 {
-    display: inline-block;
-    margin-right: 10px; /* Espacement entre les éléments */
-    
-}

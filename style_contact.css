@@ -1,0 +1,29 @@
+.sedgwick-ave-display-regular {
+    font-family: "Sedgwick Ave Display", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin-bottom: 0;
+  }
+  
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Sedgwick Ave Display", cursive;
+    color: white;
+    margin-top: 150px;
+    margin-bottom: 80px;
+  }
+
+  p {
+    padding-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 1.3rem;
+    color: white;
+    font-family: "Nokora", sans-serif;
+  }
+
