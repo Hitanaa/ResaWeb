@@ -1,3 +1,30 @@
+<?php
+
+    if (!empty($_REQUEST['nom']) && !empty($_REQUEST['prenom'])) {
+        $firstname = $_REQUEST['prenom'];
+        $lastname = $_REQUEST['nom'];
+        $email = $_REQUEST['email'];
+        $dateDebut = new DateTime($_REQUEST['anneeDebut']. '-'.$_REQUEST['moisDebut'].'-'.$_REQUEST['jourDebut']);
+        $dateFin = new DateTime($_REQUEST['anneeRetour'] .'-'.$_REQUEST['moisRetour'] .'-'.$_REQUEST['jourRetour']);
+        $interval = $dateDebut->diff($dateFin);
+        $nameMoto2 = $_REQUEST['nameMoto2'];
+
+        // Connexion à la base de données
+        include('connexionBDD.php');
+
+        $conn = BDD::getBDD();
+        // Récupérer l'ID de la moto à partir des paramètres de la requête
+        $idMoto = $_REQUEST['id'];
+
+        // Requête pour récupérer les informations de la moto
+        $sqlMoto = "SELECT * FROM moto WHERE id = :idMoto";
+        $motosStatement = $conn->prepare($sqlMoto);
+        $motosStatement->bindParam(':idMoto', $idMoto, PDO::PARAM_INT);
+        $motosStatement->execute();
+        $moto = $motosStatement->fetch();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -47,35 +74,44 @@
         <h2 class="perso">INFORMATIONS <span class="special-font">PERSONNELLES</span></h2>
         <div class="info">
             <div class="name-container">
-                <p><b>Nom :</b> Gonçalves</p>
-                <p><b>Prénom :</b> Eve</p>
+                <p><b>Prénom :</b> <?php echo htmlspecialchars($firstname); ?></p>
+                <p><b>Nom :</b> <?php echo htmlspecialchars($lastname); ?></p>
             </div>
-            <p><b>Email :</b> evegoncalves.pro@gmail.com</p>
+            <p><b>Email :</b> <?php echo htmlspecialchars($email); ?></p>
         </div>
 
         <h3>DÉTAILS DE <span class="special-font">RÉSERVATION</span></h3>
         <div class="info-container">
-    <div class="text-info">
-            <p><b>DATE DE DÉBUT</b> jj/mm/aaaa</p>
-            <p><b>DATE DE RETOUR</b> jj/mm/aaaa</p>
-            <p><b>Prix :</b> 6000€</p>
-    </div>
-        <img src="Images/moto_1.png" alt="Image moto" class="info-image">
-</div>
+            <div class="text-info">
+                <p><b>Nom :</b> <?php echo htmlspecialchars($moto['titre']); ?></p>
+                <p><b>DATE DE DÉBUT :</b> <?php echo $dateDebut->format('d/m/Y'); ?></p>
+                <p><b>DATE DE RETOUR :</b> <?php echo $dateFin->format('d/m/Y'); ?></p>
+                <p><b>Prix :</b> <?php echo htmlspecialchars($moto['prix']); ?>€</p>
+            </div>
+            <img src="Images/moto_<?php echo htmlspecialchars($moto['id']); ?>.png" alt="Image moto" class="info-image">
+        </div>
 
-<hr style="border: none; border-top: 1px solid #fff;">
+        <?php if (!empty($nameMoto2) && $nameMoto2 != 'all') : 
+            $sqlMoto2 = "SELECT * FROM moto WHERE titre = :nameMoto";
+            $motosStatement2 = $conn->prepare($sqlMoto2);
+            $motosStatement2->bindParam(':nameMoto', $nameMoto2, PDO::PARAM_STR);
+            $motosStatement2->execute();
+            $moto2 = $motosStatement2->fetch();
+        ?>
+        <hr style="border: none; border-top: 1px solid #fff;">
+        <div class="info-container">
+            <div class="text-info">
+                <p><b>Nom :</b> <?php echo htmlspecialchars($nameMoto2); ?></p>
+                <p><b>DATE DE DÉBUT :</b> <?php echo $dateDebut->format('d/m/Y'); ?></p>
+                <p><b>DATE DE RETOUR :</b> <?php echo $dateFin->format('d/m/Y'); ?></p>
+               
+                <p><b>Prix :</b> <?php echo htmlspecialchars($moto2['prix']); ?>€</p>
+            </div>
+            <img src="Images/moto_<?php echo htmlspecialchars($moto2['id']); ?>.png" alt="Image moto" class="info-image">
+        </div>
+        <?php endif; ?>
 
-<div class="info-container">
-    <div class="text-info">
-            <p><b>DATE DE DÉBUT</b> jj/mm/aaaa</p>
-            <p><b>DATE DE RETOUR</b> jj/mm/aaaa</p>
-            <p><b>Prix :</b> 6000€</p>
-    </div>
-        <img src="Images/moto_1.png" alt="Image moto" class="info-image">
-</div>
-
-
-            <button class="btn-confirm">CONFIRMER</button>
+        <a href="index.php"> <button class="btn-confirm">CONFIRMER</button></a>
         </div>
         <div>
             <img src="Images/forme1.png" class="right-image">

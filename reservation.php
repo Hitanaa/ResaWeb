@@ -75,7 +75,7 @@ $idMoto = $_REQUEST['id'];
                 <h2 class="debut">DATE DE DÉBUT</h2>
 
                 <div class="form-group calendar">
-                    <select name="jourDebut">
+                    <select name="jourDebut" id="jourDebut">
                         <option value="" disabled selected>Jour</option>
                         <?php
                         for ($i = 1; $i <= 31; $i++) {
@@ -83,7 +83,7 @@ $idMoto = $_REQUEST['id'];
                         }
                             ?>
                     </select>
-                    <select name="moisDebut">
+                    <select name="moisDebut" id="moisDebut">
                         <option value="" disabled selected>Mois</option>
                         <?php
                             $mois = array(
@@ -95,7 +95,7 @@ $idMoto = $_REQUEST['id'];
                             }
                         ?>
                     </select>
-                    <select name="anneeDebut">
+                    <select name="anneeDebut" id="anneeDebut">
                         <option value="" disabled selected>Année</option>
                         <?php
                             $anneeActuelle = date("Y");
@@ -114,7 +114,7 @@ $idMoto = $_REQUEST['id'];
                 <h2 class="retour">DATE DE RETOUR</h2>
 
                 <div class="form-group calendar">
-                    <select name="jourRetour">
+                    <select name="jourRetour" id="jourRetour">
                         <option value="" disabled selected>Jour</option>
                         <?php
                             for ($i = 1; $i <= 31; $i++) {
@@ -122,7 +122,7 @@ $idMoto = $_REQUEST['id'];
                             }
                         ?>
                     </select>
-                    <select name="moisRetour">
+                    <select name="moisRetour" id="moisRetour">
                         <option value="" disabled selected>Mois</option>
                         <?php
                             $mois = array(
@@ -134,7 +134,7 @@ $idMoto = $_REQUEST['id'];
                             }
                         ?>
                     </select>
-                    <select name="anneeRetour">
+                    <select name="anneeRetour" id="anneeRetour">
                         <option value="" disabled selected>Année</option>
                         <?php
                             $anneeActuelle = date("Y");
@@ -144,55 +144,32 @@ $idMoto = $_REQUEST['id'];
                         ?>
                     </select>
                 </div>
-
-                    <?php
-                    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                        $jourDebut = $_POST['jourDebut'];
-                        $moisDebut = $_POST['moisDebut'];
-                        $anneeDebut = $_POST['anneeDebut'];
-                        $jourRetour = $_POST['jourRetour'];
-                        $moisRetour = $_POST['moisRetour'];
-                        $anneeRetour = $_POST['anneeRetour'];
-
-                        // Validate date format (optional): You can add checks for valid day, month, and year ranges.
-
-                        // Check if start date is after end date
-                        $startDate = strtotime("$anneeDebut-$moisDebut-$jourDebut");
-                        $endDate = strtotime("$anneeRetour-$moisRetour-$jourRetour");
-
-                        if ($startDate > $endDate) {
-                            $errorMessage = "La date de début ne peut pas être après la date de fin.";
-                            // Redirect to form with error message (optional):
-                            // header("Location: recap.php?id=" . $idMoto . "&error=" . urlencode($errorMessage));
-                            // exit();
-                        } else {
-                            // Process form data (e.g., insert into database)
-                            // ... your code to handle valid form submission ...
-                        }
-                    }
-                    ?>
-
                 <!-- </fieldset>
 
                 <fieldset>
                 <legend>Options supplémentaires</legend> -->
 
                 <div class="moto">
-                   <h2>UNE DEUXIÈME MOTO ?</h2>
+                   <h2>UNE DEUXIÈME <span class="special-font">MOTO </span>?</h2>
                    <select id="name-moto" name="nameMoto2">
 
                         <option value="all">Aucune</option>
 
                         <optgroup label="Moto">
-                            <option>Améthyste</option>
-                            <option>Diamant</option>
-                            <option>Onyx</option>
-                            <option>Opale</option>
-                            <option>Quartz</option>
-                            <option>Saphir</option>
+                            <option value="Amethyste">Améthyste</option>
+                            <option value="Diamant">Diamant</option>
+                            <option value="Onyx">Onyx</option>
+                            <option value="Opale">Opale</option>
+                            <option value="Quartz">Quartz</option>
+                            <option value="Saphir">Saphir</option>
                         </optgroup>
                     </select>
                 </div>
+
+                <div class="confirmation">
+        <input type="checkbox" id="confirm-checkbox" required>
+        <label for="confirm-checkbox">Vous confirmez votre achat et certifiez avoir pris connaissance et accepté les conditions générales de vente. Un email de confirmation vous sera envoyé.</label>
+    </div>
 
                 
                 <!-- </fieldset> -->
@@ -201,6 +178,8 @@ $idMoto = $_REQUEST['id'];
                     <input type="submit" value="RÉSERVER" />;
                 </div>
             </form>
+            <p id="errorMessage" style="color: red; font-family: Nokora, sans-serif; font-weight: 500;
+    font-style: normal; font-size: 0.8rem;"></p>
         </div>
         <img src="Images/forme1.png" class="right-image">
     </div>
@@ -218,6 +197,59 @@ $idMoto = $_REQUEST['id'];
 <!-- Librairy -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="script_reservation.js"></script>
+
+<script>
+        function checkDates() {
+            const jourDebut = document.getElementById('jourDebut').value;
+            const moisDebut = document.getElementById('moisDebut').value;
+            const anneeDebut = document.getElementById('anneeDebut').value;
+
+            const jourRetour = document.getElementById('jourRetour').value;
+            const moisRetour = document.getElementById('moisRetour').value;
+            const anneeRetour = document.getElementById('anneeRetour').value;
+
+            const errorMessage = document.getElementById('errorMessage');
+
+            if (!jourDebut || !moisDebut || !anneeDebut || !jourRetour || !moisRetour || !anneeRetour) {
+                errorMessage.textContent = "";
+                return;
+            }
+
+            const dateDebut = new Date(anneeDebut, moisDebut - 1, jourDebut);
+            const dateRetour = new Date(anneeRetour, moisRetour - 1, jourRetour);
+
+            if (dateRetour <= dateDebut) {
+                errorMessage.textContent = "La date de retour doit être postérieure à la date de début.";
+            } else {
+                errorMessage.textContent = "";
+            }
+        }
+
+        document.getElementById('jourDebut').addEventListener('change', checkDates);
+        document.getElementById('moisDebut').addEventListener('change', checkDates);
+        document.getElementById('anneeDebut').addEventListener('change', checkDates);
+        document.getElementById('jourRetour').addEventListener('change', checkDates);
+        document.getElementById('moisRetour').addEventListener('change', checkDates);
+        document.getElementById('anneeRetour').addEventListener('change', checkDates);
+
+        document.getElementById('reservationForm').addEventListener('submit', function(event) {
+            const jourDebut = document.getElementById('jourDebut').value;
+            const moisDebut = document.getElementById('moisDebut').value;
+            const anneeDebut = document.getElementById('anneeDebut').value;
+
+            const jourRetour = document.getElementById('jourRetour').value;
+            const moisRetour = document.getElementById('moisRetour').value;
+            const anneeRetour = document.getElementById('anneeRetour').value;
+
+            const dateDebut = new Date(anneeDebut, moisDebut - 1, jourDebut);
+            const dateRetour = new Date(anneeRetour, moisRetour - 1, jourRetour);
+
+            if (!jourDebut || !moisDebut || !anneeDebut || !jourRetour || !moisRetour || !anneeRetour || dateRetour <= dateDebut) {
+                event.preventDefault();
+                document.getElementById('errorMessage').textContent = "Veuillez remplir toutes les dates correctement et assurez-vous que la date de retour est postérieure à la date de début.";
+            }
+        });
+    </script>
 
 </body>
 
