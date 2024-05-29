@@ -35,16 +35,17 @@ $idMoto = $_REQUEST['id'];
 
 <meta name="description" content="Réservation" />
 
-    <!-- ----------- Nav Bar ----------- -->
-    <header>
-        <nav>
-            <ul>
-                <li><b><a href="index.php">ACCUEIL</a></b></li>
-                <li><b><a href="catalogue.php">CATALOGUE</a></b></li>
-                <li><b><a href="apropos.php">À PROPOS</a></b></li>
-            </ul>
-        </nav>
-    </header>
+<!-- ----------- Nav Bar ----------- -->
+<header>
+    <nav>
+      <a href="index.php" class="logo_nav"><img src="Images/logo_nav.png" alt=""></a>
+      <ul>
+        <li><b><a href="index.php" class="hover-underline-animation">Accueil</a></b></li>
+        <li><b><a href="catalogue.php" class="hover-underline-animation">Catalogue</a></b></li>
+        <li><b><a href="apropos.php" class="hover-underline-animation" >À Propos</a></b></li>
+      </ul>
+    </nav>
+  </header>
 
     <h1>RÉSERVATION<br>D'UNE <span class="special-font">MOTO</span></h1>
     <div class="overlay">
