@@ -1,4 +1,8 @@
                                              /*  ========= DEBUT DE PAGE ========= */
+body {
+    overflow-x: hidden;
+}
+
 /* Titre */
 h1 {
     color: white;

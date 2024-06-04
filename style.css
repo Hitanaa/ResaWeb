@@ -231,6 +231,19 @@ footer p {
 }
 
 
+                                             /*  ========= BOUTON POUR REVENIR EN HAUT ========= */
+.btn-top {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 15px;
+  margin: 20px;
+  cursor: pointer;
+  fill: #ffffff;
+  z-index: 1;
+}
+
+
                                              /*  ========= STYLE MENU RESPONSIVE ========= */
 /* Style de base pour le menu */
 .menu-icon {
