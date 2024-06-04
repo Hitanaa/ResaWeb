@@ -1,3 +1,5 @@
+                                             /*  ========= DEBUT DE PAGE ========= */
+/* Titre */
 .title {
   font-family: "Nokora", sans-serif;
   font-size: 2.5rem;
@@ -8,6 +10,7 @@
     color: white;
 }
 
+/* La phrase "UNE MOTO INCROYABLE POUR UNE ODYSSÉE INOUBLIABLE" */
 .sentence {
   font-family: "Nokora", sans-serif;
     font-weight: 700;
@@ -19,12 +22,14 @@
   color: white;
 }
 
-.filtre {
+                                             /*  ========= SYSTEME DE TRI ========= */
+/* Tri */
+.tri {
   padding-top: 20px;
   padding-bottom: 50px;
 }
 
-.filtre select {
+.tri select {
   padding: 10px;
   border-radius: 10px;
   margin-right: 10px;
@@ -39,6 +44,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
+
 
 
 .container .box-container .card {
@@ -56,18 +62,23 @@
   color: #ffffff;
 }
 
+
+                                             /*  ========= DESIGN CATALOGUE ========= */
+/* Titre des motos */
 .card-body h5 {
   font-family: "Nokora", sans-serif;
   font-weight: 900;
   font-style: bold;
 }
 
+/* Texte "Category" et le prix */
 .card-body p {
   font-family: "Nokora", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
+/* Taille des motos */
 .w-80 {
   width: 80% !important;
 }

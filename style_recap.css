@@ -1,12 +1,5 @@
-h1 {
-    padding-top: 80px;
-    text-align: center;
-    color: white;
-    font-family: "Nokora", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    font-size: 3rem;
-}
+                                             /*  ========= DEBUT DE PAGE ========= */
+/* Titre niveau 2 */
 .perso h2{
     text-align: center;
     color: white;
@@ -17,6 +10,7 @@ h1 {
     margin-top: 60px;
 }
 
+/* Titre niveau 2 pour le total */
 .total h2{
     text-align: center;
     color: white;
@@ -27,6 +21,7 @@ h1 {
     margin-top: 30px;
 }
 
+/* Titre niveau 3 */
 h3 {
     text-align: center;
     color: white;
@@ -36,69 +31,52 @@ h3 {
     font-size: 1.4rem;
 }
 
-.special-font {
-    font-family: "Old Standard TT", serif;
-    font-style: italic;
-}
 
+                                             /*  ========= CONTAINER RECAP ========= */
+
+/* Container (Pour les textes : positions, couleurs) */
 .container {
     color: #fff;
     border-radius: 10px;
     width: 350px;
     text-align: center;
-    padding: 20px; /* ajout de padding pour l'espace intérieur */
+    padding: 20px;
 }
 
+/* Positionnement des informations personnelles */
 .info {
     display: flex;
-    flex-direction: column; /* Pour empiler les éléments verticalement */
-    align-items: center; /* Pour centrer les éléments horizontalement */
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Positionnement des informations personnelles côte à côte (nom et prénom) */
 .name-container {
     display: flex;
-    flex-direction: row; /* Pour mettre les éléments sur une même ligne */
-    justify-content: space-between; /* Pour les espacer */
-    width: 100%; /* Pour que le conteneur occupe toute la largeur */
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
     margin-bottom: 5px;
+    margin-top: 20px;
 }
 
 .info p {
-    margin: 5px 0; /* Espacement entre les éléments */
+    margin: 5px 0;
     font-family: "Nokora", sans-serif;
     font-style: normal;
     font-size: 1rem;
     margin-bottom: 20px;
 }
 
-.moto {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid #444;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-.btn-confirm {
-    background-color: #cc0000;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 40px;
-}
-
+/* Positionnement de l'image moto à côté du texte */
 .info-container {
     display: flex;
-    align-items: center; /* Pour aligner les éléments verticalement */
+    align-items: center;
 }
 
+/* Style des textes */
 .text-info {
-    flex: 1; /* Pour que le texte prenne tout l'espace disponible */
+    flex: 1;
     text-align: left;
     margin-right: 50px;
     font-family: "Nokora", sans-serif;
@@ -107,8 +85,11 @@ h3 {
     margin-right: auto;
 }
 
+
+                                             /*  ========= STYLE DES IMAGES ========= */
+/* Taille des images */
 .info-image {
-    margin-right: -40px; /* Espace entre les dates et l'image */
+    margin-right: -40px;
     width: 140px;
 }
 
@@ -117,6 +98,9 @@ h3 {
     align-items: center;
 }
 
+
+                                             /*  ========= STYLE BOUTON CONFIRMER ========= */
+/* Bouton confirmer */
 .btn-confirm {
     display: inline-block;
     padding: 10px 20px;
@@ -131,14 +115,17 @@ h3 {
     margin: auto;
     margin-top: 8px;
     font-size: 1rem;
+    cursor: pointer;
 }
 
+/* Bouton hover */
 .btn-confirm:hover {
     background-color: #ffffff;
     color: #7b0000;
 }
 
 
+                                             /*  ========= RESPONSIVE ========= */
 @media (max-width: 480px) {
     h1 {
         font-size: 2rem;

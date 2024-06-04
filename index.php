@@ -187,9 +187,11 @@
         <h3 data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="500">NOS <span class="special-font">AVIS</span></h3>
+
           <!-- Carousel wrapper -->
         <div id="carouselMultiItemExample2" data-mdb-carousel-init class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
-          <!-- Controls -->
+
+          <!-- Boutons pour tourner le slider -->
           <div class="d-flex justify-content-between">
             <button class="carousel-control-prev " type="button" data-mdb-target="#carouselMultiItemExample2" data-mdb-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true" style=" filter: invert(2%) grayscale(100%);"></span>
@@ -202,6 +204,7 @@
           </div>
           <!-- Inner -->
           <div class="carousel-inner py-4">
+
             <!-- Single item -->
             <div class="carousel-item active">
               <div class="container">
@@ -346,9 +349,10 @@
             </ul>
             <p>Tout droit réservé à Prestige © 2024</p>
     </footer>
-
+  </body>
+ 
       <!-- Librairy -->
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script> 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
         <script src="js/owl.carousel.min.js"></script>
@@ -365,7 +369,5 @@
         navLinks.classList.toggle('active');
       });
       </script>
-  </body>
- 
 
 </html>

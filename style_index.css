@@ -1,3 +1,4 @@
+                                             /*  ========= DEBUT DE PAGE ========= */
 /* Styles pour la section de la moto */
 .moto-section {
   background-color: #000000; 
@@ -17,6 +18,7 @@
   animation: opacityAnimation 5s infinite alternate;
 }
 
+/* Opacité et animation de la vidéo */
 @keyframes opacityAnimation {
   0% {
     opacity: 0.5;
@@ -27,6 +29,8 @@
 }
 
 
+
+/* Titre à l'endroit et à l'envers */
 .overlay {
   position: absolute;
   top: 50%;
@@ -83,19 +87,20 @@
   top: 40px;
 }
 
-.container img {
-  width: 300px;
-}
 
-.description {
-  background: url('Images/fond2.png') no-repeat center center fixed;
-  background-size: cover;
-}
 
+/* Ligne blanche */
 .ligne-blanche {
   width: 100%;
   height: 2px;
   background-color: #ffffff56;
+}
+
+                                             /*  ========= EXPLICATION DU SITE ========= */
+/* Explication du site web */
+.description {
+  background: url('Images/fond2.png') no-repeat center center fixed;
+  background-size: cover;
 }
 
 .description h2 {
@@ -125,7 +130,7 @@ p {
 }
 
 
-/* MOTO SELECTION */
+                                             /*  ========= PREMIER SLIDER : MOTO ========= */
 
 .moto {
   background: url('Images/fond2.png') no-repeat center center fixed;
@@ -150,8 +155,13 @@ p {
   font-style: bold;
 }
 
-/* AVIS */
+/* Taille des images motos */
+.container img {
+  width: 300px;
+}
 
+
+                                             /*  ========= DEUXIEME SLIDER : AVIS ========= */
 section.comment {
   background: url('Images/fond2.png') no-repeat center center fixed;
   background-size: cover;
@@ -206,6 +216,7 @@ section.comment {
 }
 
 
+                                             /*  ========= STYLE MENU RESPONSIVE ========= */
 /* Style de base pour le menu */
 .menu-icon {
   display: none; /* Cache l'icône hamburger par défaut */

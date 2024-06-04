@@ -1,28 +1,33 @@
 <?php
 
+// Inclut le fichier de connexion à la base de données
 include('connexionBDD.php');
 
+// Obtient la connexion à la base de données
 $conn = Database::getBDD();
 
+// Requête SQL de base pour sélectionner toutes les motos
 $sql = "SELECT * FROM moto";
 
+// Vérifie si une option de tri est sélectionnée via le formulaire POST
 if (isset($_POST['tri'])) {
     $tri = $_POST['tri'];
     if ($tri == "date_asc") {
-        $sql .= " ORDER BY prix ASC";
+        $sql .= " ORDER BY prix ASC"; // Tri par prix croissant
     } elseif ($tri == "date_desc") {
-        $sql .= " ORDER BY prix DESC";
+        $sql .= " ORDER BY prix DESC"; // Tri par prix décroissant
     }
 } else {
     // Si aucune option de tri n'est sélectionnée, tri par défaut
     $sql .= " ORDER BY prix ASC";
 }
 
-$recipesStatement = $conn->query($sql);
-$recipes = $recipesStatement->fetchAll();
+$recipesStatement = $conn->query($sql);  
+$recipes = $recipesStatement->fetchAll(); 
 
 if ($recipesStatement->rowCount() > 0) {
     foreach ($recipes as $recipe) {
+      // Génère le code HTML pour afficher chaque moto
           echo '<div class="col-lg-4 col-md-6 mb-4">
                   <div class="card">
                     <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light" data-mdb-ripple-color="light">

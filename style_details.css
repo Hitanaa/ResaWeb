@@ -1,3 +1,5 @@
+                                             /*  ========= DEBUT DE PAGE ========= */
+/* Titre */
 h1 {
     color: white;
     text-align: center;
@@ -11,6 +13,7 @@ h1 {
     font-style: normal;
 }
 
+/* Titre à l'envers */
 .upside {
     color: white;
     text-align: center;
@@ -21,6 +24,7 @@ h1 {
     transform: rotate(180deg);
 }
 
+/* Bouton réservation du haut */
 .button-top {
     display: block;
     margin: auto;
@@ -34,7 +38,8 @@ h1 {
     font-size: 1.2rem;
     margin-top: 50px;
 }
-
+                                             /*  ========= BOUTON TOP DE RESERVATION ========= */
+/* Bouton réservation (texte) */
 .button-top a {
     display: inline-block;
     padding: 10px 20px;
@@ -46,13 +51,15 @@ h1 {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Bouton réservation hover */
 .button-top a:hover {
     background-color: #ffffff;
     color: #7b0000;
 }
 
 
-
+                                            /*  ========= PREMIERE EXPLICATION MOTO ========= */
+/* Titre niveau 2 */
 h2 {
     color: white;
     font-family: "Nokora", sans-serif;
@@ -80,12 +87,15 @@ h2 {
 }
 
 
+/* Image moto transparent */
 .transparent {
     width: 600px;
     height: auto;
     margin-left: 20px;
 }
 
+
+/* Image moto */
 .image-moto {
     position: absolute;
     bottom: 0;
@@ -94,6 +104,8 @@ h2 {
     width: 620px;
 }
 
+
+/* Texte explicatif */
 p {
     color: white;
     font-family: "Nokora", sans-serif;
@@ -105,10 +117,13 @@ p {
 }
 
 
+
+                                             /*  ========= DEUXIEME EXPLICATION ROUE ========= */
 .container_wheel {
     display: flex;
 }
 
+/* Texte explicatif */
 .container_wheel p {
     margin-right: 0px;
     margin-top: 280px;
@@ -120,17 +135,20 @@ p {
     margin-top: 150px;
 }
 
+/* Image roue moto */
 .wheel img {
     width: 850px;
     margin-left: 218px;
 }
 
 
+                                             /*  ========= TROISIEME EXPLICATION MOTEUR ========= */
 .container_motor {
     display: flex;
     margin-top: 200px;
 }
 
+/* Texte explicatif */
 .motor_text p {
     color: white;
     font-family: "Nokora", sans-serif;
@@ -142,13 +160,15 @@ p {
     white-space: pre-wrap;
 }
 
-
+/* Image moteur moto */
 .motor img {
     width: 850px;
     margin-right: -200px;
 }
 
 
+
+                                             /*  ========= BOUTON DU BAS DE RESERVATION ========= */
 .container {
     display: flex;
     align-items: center;
@@ -174,13 +194,14 @@ p {
     color: #fff;
 }
 
+/* Texte bouton */
 .button-container h3 {
     font-size: 1.2rem;
     font-weight: 900;
     font-style: normal;
 }
 
-
+/* Bouton */
 .button-container a {
     display: inline-block;
     padding: 10px 20px;
@@ -194,6 +215,7 @@ p {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Bouton hover */
 .button-container a:hover {
     background-color: #ffffff;
     color: #7b0000;

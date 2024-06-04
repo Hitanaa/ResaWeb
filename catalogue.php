@@ -61,8 +61,8 @@
     <h2 class="sentence">UNE <span class="special-font">MOTO</span> INCROYABLE POUR UNE <span class="special-font">ODYSSÉE</span> INOUBLIABLE</h2>
 
 
-<!-- ----------- Filtre/Tri ----------- -->
-    <div class="filtre">
+<!-- ----------- Tri ----------- -->
+    <div class="tri">
         <label for="selectOption">Filtre</label>
         <select name="tri" id="tri">
             <option value="default" selected>Aucun</option>
@@ -87,35 +87,12 @@
         </ul>
         <p>Tout droit réservé à Prestige © 2024</p>
 </footer>
+</body>
 
-
-<script>
-document.getElementById('tri').addEventListener('change', function() {
-    fetchMotos();
-});
-
-function fetchMotos() {
-    var tri = document.getElementById('tri').value;
-
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'fetch_motos.php', true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            document.getElementById('moto-container').innerHTML = xhr.responseText;
-        }
-    };
-    xhr.send('tri=' + tri);
-}
-
-// Fetch motos initially
-fetchMotos();
-</script>
+<script src="script_tri.js"></script>
 
 <!-- Librairy AOS -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
-</body>
-
 
 </html>
 

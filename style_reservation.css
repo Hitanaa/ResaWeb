@@ -1,4 +1,5 @@
-/* --- Titre --- */
+                                             /*  ========= DEBUT DE PAGE ========= */
+/* Titre */
 h1 {
     padding-top: 80px;
     text-align: center;
@@ -9,9 +10,8 @@ h1 {
     font-size: 3rem;
 }
 
-
-
-/* --- Calendrier --- */
+                                             /*  ========= CALENDRIER ========= */
+/* Calendrier début */
 .debut {
     color: #ffffff;
     font-family: "Nokora", sans-serif;
@@ -23,6 +23,7 @@ h1 {
     margin-right: 150px ;
 }
 
+/* Calendrier retour */
 .retour {
     color: #ffffff;
     font-family: "Nokora", sans-serif;
@@ -34,8 +35,6 @@ h1 {
     margin-right: 140px ;
 }
 
-
-
 /* Calendrier style */
 .calendar {
     width: 100%;
@@ -44,7 +43,7 @@ h1 {
     padding: 10px;
     box-sizing: border-box;
     border-radius: 5px;
-    border: 2px solid white; /* Ajout d'une bordure blanche */
+    border: 2px solid white;
 }
 
 .calendar select {
@@ -52,16 +51,17 @@ h1 {
     font-size: 16px;
     border-radius: 5px;
     color: rgb(100, 100, 100);
-    background-color: transparent; /* Suppression du fond blanc */
+    background-color: transparent;
 }
 
 
+                                             /*  ========= IMAGE DANS LE BACKGROUND (RESERVATION.PHP ET RECAP.PHP) ========= */
 
-/* --- Image forme background --- */
+/* Positionnement des images (formes blanches) */
 .left-image,
 .right-image {
     position: absolute;
-    width: 400px; /* Ajustez la taille selon vos besoins */
+    width: 400px;
     height: auto;
 }
 
@@ -76,11 +76,10 @@ h1 {
 }
 
 
-
-/* --- Overlay --- */
+                                             /*  ========= OVERLAY (RESERVATION.PHP ET RECAP.PHP) ========= */
 .overlay {
-    background-color: #3a3a3a69; /* Couleur avec 75% d'opacité */
-    width: 500px; /* Carré avec une largeur de 50% de la hauteur de la fenêtre */; /* Carré avec une largeur de 50% de la hauteur de la fenêtre */
+    background-color: #3a3a3a69; 
+    width: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,30 +89,30 @@ h1 {
 }
 
 
-
+                                             /*  ========= CERLES (RESERVATION.PHP ET RECAP.PHP) ========= */
 /* --- Cercles --- */
 .circle2 {
-    width: 20px; /* Diamètre du cercle */
-    height: 20px; /* Diamètre du cercle */
-    background-color: rgba(255, 255, 255, 0.323); /* Couleur blanche */
-    border-radius: 50%; /* Pour créer un cercle */
-    position: absolute; /* Position absolue pour les superposer */
-    top: 40%; /* À mi-chemin verticalement */
-    left: 51.7%; /* À mi-chemin horizontalement */
-    transform: translate(-50%, -50%); /* Pour le centrer */
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.323); 
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    left: 51.7%;
+    transform: translate(-50%, -50%);
 }
 
 .circle {    
-    width: 20px; /* Diamètre du cercle */
-    height: 20px; /* Diamètre du cercle */
-    background-color: white; /* Couleur blanche */
-    border-radius: 50%; /* Pour créer un cercle */
-    position: absolute; /* Position absolue pour les superposer */
-    top: 40%; /* À mi-chemin vertical3ment */
-    left: 48.4%; /* À mi-chemin horizontalement */
-    transform: translate(-50%, -50%); /* Pour le centrer */
-    width: 20px; /* Diamètre du deuxième cercle */
-    height: 20px; /* Diamètre du deuxième cercle */
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    left: 48.4%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
 }
 
 .circle4 {
@@ -142,7 +141,7 @@ h1 {
 
 
 
-/* --- Container --- */
+                                             /*  ========= STYLE DU FORMULAIRE ========= */
 .form-container {
     width: 300px;
     margin-bottom: 20px;
@@ -155,9 +154,7 @@ h1 {
     margin-top: 30px;
 }
 
-
-
-/* --- Container texte --- */
+/* Container texte */
 .form-group input[type="text"] {
     width: 46%; /* Ajustement pour la taille */
     padding: 10px;
@@ -168,9 +165,7 @@ h1 {
     color: white;
 }
 
-
-
-/* --- Container email --- */
+/* Container email */
 .form-group input[type="email"] {
     width: 100%;
     height: 40px;
@@ -183,7 +178,7 @@ h1 {
 
 
 
-/* "Une deuxième moto ?" */
+                                             /*  ========= "UNE DEUXIEME MOTO ?" ========= */
 .moto {
     margin: 40px auto 20px;
     width: fit-content;
@@ -191,6 +186,7 @@ h1 {
     
 }
 
+/* Titre niveau 2 */
 .moto h2 {
     color: #ffffff;
     font-family: "Nokora", sans-serif;
@@ -203,7 +199,7 @@ h1 {
 
 
 
-/* --- Nom moto menu déroulant --- */
+                                             /*  ========= MENU DEROULANT ========= */
 .name-moto {
     width: 100px;
     height: 100px;
@@ -217,7 +213,7 @@ h1 {
     
 }
 
-/* Style du déroulement */
+/* Style du menu déroulant */
 #name-moto {
     font-size: 1rem; /* Taille de police agrandie */
     padding: 8px; /* Espacement interne */
@@ -231,7 +227,7 @@ h1 {
 
 
 
-/* Bouton */
+                                             /*  ========= BOUTON RESERVER ========= */
 .form-group input[type="submit"] {
     display: inline-block;
     padding: 10px 20px;
@@ -247,6 +243,7 @@ h1 {
     font-size: 1rem;
 }
 
+/* Bouton hover */
 .form-group input:hover {
     background-color: #ffffff;
     color: #7b0000;
@@ -254,7 +251,7 @@ h1 {
 
 
 
-/* Case confirmation */
+                                             /*  ========= CASE CONFIRMATION ========= */
 .confirmation {
     padding: 5px;
     border-radius: 5px;
@@ -275,6 +272,7 @@ label {
 }
 
 
+                                             /*  ========= RESPONSIVE ========= */
 /* Téléphones portables en portrait */
 @media (max-width: 480px) {
     .overlay {

@@ -1,38 +1,17 @@
+                                             /*  ========= DEBUT DE PAGE ========= */
+/* Titre de chaque case */
 h2 {
   font-family: "Nokora", sans-serif;
   font-weight: 900;
   font-style: normal;
 }
 
+/* Paragraphes */
 P {
   font-family: "Nokora", sans-serif;
 }
 
-.sources {
-  margin-top: 40px;
-}
-
-.sources h3 {
-  margin: auto;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  font-family: "Nokora", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-  margin-bottom: 10px;
-}
-
-.sources h4 {
-  margin: auto;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  font-family: "Nokora", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
+/* Les dates entre () */
 .date {
   font-family: "Nokora", sans-serif;
   font-weight: 700;
@@ -40,6 +19,7 @@ P {
   font-size: 1rem;
 }
 
+/* Les lignes et textes */
 .timeline {
   margin: 5em auto;
   max-width: 34.15em;
@@ -112,6 +92,8 @@ P {
 }
 
 
+
+/* Images qui flotte */
 .floating-container {
   display: flex;
   align-items: center;
@@ -164,3 +146,31 @@ P {
   
 }
 
+                                             /*  ========= SOURCES ========= */
+/* Sources */
+.sources {
+  margin-top: 40px;
+}
+
+/* Texte "Images" "Librairy" "Font" "Texte" */
+.sources h3 {
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-family: "Nokora", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+
+/* Texte "Pintest" "Unsplash" "Aos" "Github" "Google Font" "ChatGPT" */
+.sources h4 {
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-family: "Nokora", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}

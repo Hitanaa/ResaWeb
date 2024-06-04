@@ -1,3 +1,5 @@
+                                             /*  ========= CETTE PAGE DE CSS EST COMMUN 
+                                             À TOUTES LES PAGES .php et .html ========= */
 *,
 *::before,
 ::after {
@@ -11,7 +13,7 @@ body {
 }
 
 
-
+                                             /*  ========= FONTS ========= */
 /* Fonts */
 .old-standard-tt-regular {
   font-family: "Old Standard TT", serif;
@@ -73,7 +75,7 @@ body {
 
 
 
-/* Nav Bar */
+                                             /*  ========= NAV BAR ========= */
 header {
   position: absolute;
   top: 0;
@@ -122,9 +124,12 @@ nav ul li a {
   max-width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 
-/* ScrollBar */
+                                             /*  ========= STYLE SCROLLBAR ========= */
 ::-webkit-scrollbar {
   width: 8px !important;
 }
@@ -144,8 +149,7 @@ nav ul li a {
 }
 
 
-
-/* Mentions Légales / Contacts */
+                                             /*  ========= MENTIONS LEGALES / CONTACTS (FOOTER) ========= */
 footer {
   background: url('Images/fond2.png') no-repeat center center fixed;
   background-size: cover;
@@ -213,29 +217,7 @@ footer p {
 }
 
 
-
-/* --- Bouton top / navbar scroll smooth --- */
-html {
-  scroll-behavior: smooth;
-}
-
-
-
-/* --- bouton pour le top --- */
-.btn-top {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  padding: 15px;
-  margin: 20px;
-  cursor: pointer;
-  fill: #ffffff;
-  z-index: 1;
-}
-
-
-
-/* --- Logo dans index.php --- */
+                                             /*  ========= LOGO (DANS INDEX.PHP ET CATALOGUE.PHP) ========= */
 .logo-container {
   display: flex;
   justify-content: center;
@@ -249,6 +231,7 @@ html {
 }
 
 
+                                             /*  ========= STYLE MENU RESPONSIVE ========= */
 /* Style de base pour le menu */
 .menu-icon {
   display: none; /* Cache l'icône hamburger par défaut */
@@ -266,7 +249,7 @@ nav ul li {
   margin-left: 2rem;
 }
 
-/* Media queries pour le menu responsive */
+                                             /*  ========= RESPONSIVE ========= */
 @media screen and (max-width: 768px) {
   .menu-icon {
     display: block; /* Affiche l'icône hamburger pour les appareils mobiles */

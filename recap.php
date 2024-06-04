@@ -131,7 +131,7 @@ if (!empty($_REQUEST['nom']) && !empty($_REQUEST['prenom'])) {
 
         <!-- ----------- Prix Total ----------- -->
         <div class="total">
-            <h2>Prix total :</h2>
+            <h2>PRIX <span class="special-font">TOTAL</SPAN> :</h2>
             <p><?php echo $prixTotal; ?>€</p>
         </div>
 
@@ -153,6 +153,7 @@ if (!empty($_REQUEST['nom']) && !empty($_REQUEST['prenom'])) {
         </ul>
         <p>Tout droit réservé à Prestige © 2024</p>
     </footer>
+</body>
 
     <!-- Library AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -164,7 +165,5 @@ if (!empty($_REQUEST['nom']) && !empty($_REQUEST['prenom'])) {
         navLinks.classList.toggle('active');
       });
       </script>
-
-</body>
 
 </html>

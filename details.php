@@ -173,11 +173,10 @@ collection</b>. </p>
     </ul>
     <p>Tous droits réservés à Prestige © 2024</p>
   </footer>
+</body>
 
   <!-- Librairy AOS  -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
-
-</body>
