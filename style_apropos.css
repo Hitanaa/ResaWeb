@@ -8,6 +8,31 @@ P {
   font-family: "Nokora", sans-serif;
 }
 
+.sources {
+  margin-top: 40px;
+}
+
+.sources h3 {
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-family: "Nokora", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+
+.sources h4 {
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-family: "Nokora", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
 .date {
   font-family: "Nokora", sans-serif;
   font-weight: 700;
@@ -94,9 +119,9 @@ P {
 }
 
 .floating-image {
-  width: 350px; /* Ajustez la taille initiale selon vos besoins */
-  height: auto; /* Maintient le ratio d'aspect de l'image */
-  border-radius: 20px; /* Arrondit seulement les coins */
+  width: 350px;
+  height: auto;
+  border-radius: 20px;
   animation: float 3s ease-in-out infinite;
 }
 

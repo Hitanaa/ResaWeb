@@ -7,6 +7,7 @@
   <title>À propos - Prestige</title>
 
 <!-- Relier le CSS au HTML  -->
+
 <link rel="stylesheet" href="style_apropos.css">
 <link rel="stylesheet" href="style.css">
 
@@ -25,28 +26,31 @@
 
 
 </head>
+<body>
 
+<meta name="description" content="À propos" />
+
+<!-- ----------- Bouton pour revenir en haut  ----------- -->
 <a class="btn-top" href="#top">
         <svg src="img/direction.svg" width="24" height="20">
             <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"></path>
         </svg>
     </a>
 
-<body>
-
-<meta name="description" content="À propos" />
-
 <!-- ----------- Nav Bar ----------- -->
 <header>
-    <nav>
-      <a href="index.php" class="logo_nav"><img src="Images/logo_nav.png" alt=""></a>
-      <ul>
-        <li><b><a href="index.php" class="hover-underline-animation">Accueil</a></b></li>
-        <li><b><a href="catalogue.php" class="hover-underline-animation">Catalogue</a></b></li>
-        <li><b><a href="apropos.php" class="hover-underline-animation" >À Propos</a></b></li>
-      </ul>
-    </nav>
-  </header>
+      <nav>
+        <a href="index.php" class="logo_nav"><img src="Images/logo_nav.png" alt=""></a>
+        <div class="menu-icon">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+          <li><b><a href="index.php" class="hover-underline-animation">Accueil</a></b></li>
+          <li><b><a href="catalogue.php" class="hover-underline-animation">Catalogue</a></b></li>
+          <li><b><a href="apropos.php" class="hover-underline-animation">À Propos</a></b></li>
+        </ul>
+      </nav>
+    </header>
 
 <!-- ----------- Première case ----------- -->
   <div class="timeline">
@@ -110,6 +114,14 @@
         <img src="Images/Eve.jpg" alt="Photo d'Eve" class="floating-image">
   </div>
 
+  <div class="sources">
+    <h3>Sources libre de droit</h4>
+  <h4>Images: <b>Pinterest</b>, <b>Unsplash</b></h4>
+  <h4>Librairy : <b>Aos</b>, <b>GitHub</b></h4>
+  <h4>Font : <b>Google Font</b></h4>
+  <h4>Texte : <b>ChatGPT</b></h4>
+  </div>
+
 <!-- ----------- Mentions Légales / Contacts -----------  -->
   <footer>
         <ul>
@@ -120,12 +132,19 @@
         <p>Tout droit réservé à Prestige © 2024</p>
 </footer>
 
+</body>
+
 <!-- Librairy AOS  -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
 </script>
 
-</body>
+<script>
+        document.querySelector('.menu-icon').addEventListener('click', () => {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+      });
+      </script>
 
 </html>

@@ -25,9 +25,9 @@
 }
 
 .filtre select {
-  padding: 10px; /* Augmenter la taille des filtres */
-  border-radius: 10px; /* Arrondir les coins des filtres */
-  margin-right: 10px; /* Espacement entre les filtres */
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
 }
 
 .container{
@@ -36,7 +36,7 @@
 }
 .container .box-container{
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Répéter 3 fois avec une fraction égale de l'espace */
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
@@ -54,4 +54,20 @@
 }
 .container .box-container .card p{
   color: #ffffff;
+}
+
+.card-body h5 {
+  font-family: "Nokora", sans-serif;
+  font-weight: 900;
+  font-style: bold;
+}
+
+.card-body p {
+  font-family: "Nokora", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.w-80 {
+  width: 80% !important;
 }

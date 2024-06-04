@@ -12,11 +12,11 @@
 
     <!-- Fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Nokora:wght@100;300;400;700;900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nokora:wght@100;300;400;700;900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
@@ -27,25 +27,29 @@
     <!-- Librairy AOS  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-
-<a class="btn-top" href="#top">
-    <svg src="img/direction.svg" width="24" height="20">
-        <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"></path>
-    </svg>
-</a>
-
 <body>
-<!-- ----------- Nav Bar ----------- -->
-<header>
-    <nav>
-      <a href="index.php" class="logo_nav"><img src="Images/logo_nav.png" alt=""></a>
-      <ul>
-        <li><b><a href="index.php" class="hover-underline-animation">Accueil</a></b></li>
-        <li><b><a href="catalogue.php" class="hover-underline-animation">Catalogue</a></b></li>
-        <li><b><a href="apropos.php" class="hover-underline-animation" >À Propos</a></b></li>
-      </ul>
-    </nav>
-  </header>
+
+    <!-- ----------- Bouton pour revenir en haut  ----------- -->
+    <a class="btn-top" href="#top">
+        <svg src="img/direction.svg" width="24" height="20">
+            <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"></path>
+        </svg>
+    </a>
+
+    <!-- ----------- Nav Bar ----------- -->
+    <header>
+        <nav>
+          <a href="index.php" class="logo_nav"><img src="Images/logo_nav.png" alt=""></a>
+          <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+          </div>
+          <ul class="nav-links">
+            <li><b><a href="index.php" class="hover-underline-animation">Accueil</a></b></li>
+            <li><b><a href="catalogue.php" class="hover-underline-animation">Catalogue</a></b></li>
+            <li><b><a href="apropos.php" class="hover-underline-animation">À Propos</a></b></li>
+          </ul>
+        </nav>
+      </header>
 
     <!-- ----------- TERMES ----------- -->
     <h1 data-aos="zoom-in">TERMES</h1>
@@ -151,12 +155,17 @@
         </ul>
         <p>Tout droit réservé à Prestige © 2024</p>
     </footer>
-
+</body>
     <!-- Librairy AOS  -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-</body>
 
+<script>
+    document.querySelector('.menu-icon').addEventListener('click', () => {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  });
+  </script>
 </html>

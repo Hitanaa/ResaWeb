@@ -7,14 +7,24 @@ h1 {
     font-style: normal;
     font-size: 3rem;
 }
-h2 {
+.perso h2{
     text-align: center;
     color: white;
     font-family: "Nokora", sans-serif;
     font-weight: 900;
     font-style: normal;
     font-size: 1.4rem;
-    margin-top: 80px;
+    margin-top: 60px;
+}
+
+.total h2{
+    text-align: center;
+    color: white;
+    font-family: "Nokora", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1.4rem;
+    margin-top: 30px;
 }
 
 h3 {
@@ -34,7 +44,7 @@ h3 {
 .container {
     color: #fff;
     border-radius: 10px;
-    width: 300px;
+    width: 350px;
     text-align: center;
     padding: 20px; /* ajout de padding pour l'espace intérieur */
 }
@@ -126,5 +136,36 @@ h3 {
 .btn-confirm:hover {
     background-color: #ffffff;
     color: #7b0000;
+}
+
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .circle {
+        top: 250px;
+        left: 55%;
+      }
+  
+      .circle2  {
+          top: 250px;
+          left: 45%;
+      }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    .circle {
+      top: 250px;
+      left: 55%;
+    }
+
+    .circle2  {
+        top: 250px;
+        left: 45%;
+    }
+    h1 {
+        font-size: 2rem;
+    }
 }
 

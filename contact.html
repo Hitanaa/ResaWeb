@@ -12,11 +12,11 @@
 
     <!-- Fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Nokora:wght@100;300;400;700;900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nokora:wght@100;300;400;700;900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
@@ -28,27 +28,30 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<a class="btn-top" href="#top">
-    <svg src="img/direction.svg" width="24" height="20">
-        <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"></path>
-    </svg>
-</a>
-
 <body>
-
     <meta name="description" content="Contact" />
 
-<!-- ----------- Nav Bar ----------- -->
-<header>
-    <nav>
-      <a href="index.php" class="logo_nav"><img src="Images/logo_nav.png" alt=""></a>
-      <ul>
-        <li><b><a href="index.php" class="hover-underline-animation">Accueil</a></b></li>
-        <li><b><a href="catalogue.php" class="hover-underline-animation">Catalogue</a></b></li>
-        <li><b><a href="apropos.php" class="hover-underline-animation" >À Propos</a></b></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- ----------- Bouton pour revenir en haut  ----------- -->
+    <a class="btn-top" href="#top">
+        <svg src="img/direction.svg" width="24" height="20">
+            <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"></path>
+        </svg>
+    </a>
+
+    <!-- ----------- Nav Bar ----------- -->
+    <header>
+        <nav>
+          <a href="index.php" class="logo_nav"><img src="Images/logo_nav.png" alt=""></a>
+          <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+          </div>
+          <ul class="nav-links">
+            <li><b><a href="index.php" class="hover-underline-animation">Accueil</a></b></li>
+            <li><b><a href="catalogue.php" class="hover-underline-animation">Catalogue</a></b></li>
+            <li><b><a href="apropos.php" class="hover-underline-animation">À Propos</a></b></li>
+          </ul>
+        </nav>
+      </header>
 
     <!-- ----------- CONTACTEZ-NOUS ----------- -->
     <h1 data-aos="zoom-in">Contactez-nous</h1>
@@ -58,31 +61,47 @@
         <div class="contact-info">
             <p><strong>Adresse e-mail :</strong> evegoncalves.pro@gmail.com</p>
             <p><strong>Numéro de téléphone :</strong> <a href="">(+33) 6 64 77 90 64</a></p>
-            <p><strong>Adresse postale :</strong><br> IUT de Marne-la-Vallée - Université Gustave Eiffel<br> 2 Rue Albert Einstein, 77420 Champs-sur-Marne en FRANCE</p>
+            <p><strong>Adresse postale :</strong><br> IUT de Marne-la-Vallée - Université Gustave Eiffel<br> 2 Rue
+                Albert Einstein, 77420 Champs-sur-Marne en FRANCE</p>
             <p><strong>Horaires :</strong> Ouvert 24h/24, 7j/7</p>
         </div>
     </div>
-    
+
     <div class="map-responsive">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.1007205090314!2d2.5826950764632146!3d48.83721747132929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e60e33dd9a3fdd%3A0x7e5ced48ab7fc8df!2sIUT%20de%20Marne-la-Vallée%20-%20Université%20Gustave%20Eiffel!5e0!3m2!1sfr!2sfr!4v1715004766986!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.1007205090314!2d2.5826950764632146!3d48.83721747132929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e60e33dd9a3fdd%3A0x7e5ced48ab7fc8df!2sIUT%20de%20Marne-la-Vallée%20-%20Université%20Gustave%20Eiffel!5e0!3m2!1sfr!2sfr!4v1715004766986!5m2!1sfr!2sfr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-    
+
 
     <!-- ----------- Mentions Légales / Contacts -----------  -->
     <footer>
         <ul>
-            <li class="hover-underline-animation"><b><a href="terme.html"><h4>TERMES</h4></a></b></li>
-            <li class="hover-underline-animation"><b><a href="confidentialite.html"><h4>CONFIDENTIALITÉ</h4></a></b></li>
-            <li class="hover-underline-animation"><b><a href="contact.html"><h4>CONTACTEZ-NOUS</h4></a></b></li>
+            <li class="hover-underline-animation"><b><a href="terme.html">
+                        <h4>TERMES</h4>
+                    </a></b></li>
+            <li class="hover-underline-animation"><b><a href="confidentialite.html">
+                        <h4>CONFIDENTIALITÉ</h4>
+                    </a></b></li>
+            <li class="hover-underline-animation"><b><a href="contact.html">
+                        <h4>CONTACTEZ-NOUS</h4>
+                    </a></b></li>
         </ul>
         <p>Tous droits réservés à Prestige © 2024</p>
     </footer>
-
-    <!-- Librairy AOS  -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 </body>
+
+<!-- Librairy AOS  -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script>
+    document.querySelector('.menu-icon').addEventListener('click', () => {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  });
+  </script>
 
 </html>

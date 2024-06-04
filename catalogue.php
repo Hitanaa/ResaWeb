@@ -27,10 +27,9 @@
 </head>
 
 <body>
-
 <meta name="description" content="Catalogue" />
 
-<!-- --- Bouton pour revenir à la page d'accueil du site --- -->
+<!-- ----------- Bouton pour revenir en haut  ----------- -->
 <a class="btn-top" href="#top">
         <svg src="img/direction.svg" width="24" height="20">
             <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"></path>
@@ -60,6 +59,9 @@
 </div>
 
     <h2 class="sentence">UNE <span class="special-font">MOTO</span> INCROYABLE POUR UNE <span class="special-font">ODYSSÉE</span> INOUBLIABLE</h2>
+
+
+<!-- ----------- Filtre/Tri ----------- -->
     <div class="filtre">
         <label for="selectOption">Filtre</label>
         <select name="tri" id="tri">
@@ -71,6 +73,7 @@
 
     <div class="row" id="moto-container">
       <!-- Les résultats des motos seront affichés ici -->
+      
     </div>
   </div>
 </section>
@@ -84,7 +87,6 @@
         </ul>
         <p>Tout droit réservé à Prestige © 2024</p>
 </footer>
-
 
 
 <script>

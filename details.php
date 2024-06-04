@@ -1,15 +1,14 @@
 <?php
-
 // Connexion à la base de données
 include('connexionBDD.php');
 
-$conn = BDD::getBDD();
+$conn = Database::getBDD();
 
 // Récupérer l'ID de la moto à partir des paramètres de la requête
 $idMoto = $_REQUEST['id'];
 
 // Requête pour récupérer les informations de la moto
-$sqlMoto = "SELECT * FROM moto WHERE id = :idMoto";
+$sqlMoto = "SELECT * FROM moto WHERE id = :idMoto"; 
 $motosStatement = $conn->prepare($sqlMoto);
 $motosStatement->bindParam(':idMoto', $idMoto, PDO::PARAM_INT);
 $motosStatement->execute();
@@ -81,7 +80,7 @@ $images = $ImagemotosStatement->fetchAll(PDO::FETCH_ASSOC);
     <h1 class="upside">DIAMANT</h1>
   </div>
 
-
+  <!-- ----------- Bouton pour revenir en haut  ----------- -->
   <div class="button-top">
   <?php
      echo '<a href="reservation.php?id='.$idMoto.'">RÉSERVER</a>';

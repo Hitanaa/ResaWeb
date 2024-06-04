@@ -10,20 +10,19 @@ body {
   margin: 0;
 }
 
-/* Fonts */
 
+
+/* Fonts */
 .old-standard-tt-regular {
   font-family: "Old Standard TT", serif;
   font-weight: 400;
   font-style: normal;
 }
-
 .old-standard-tt-bold {
   font-family: "Old Standard TT", serif;
   font-weight: 700;
   font-style: normal;
 }
-
 .old-standard-tt-regular-italic {
   font-family: "Old Standard TT", serif;
   font-weight: 400;
@@ -35,25 +34,21 @@ body {
   font-weight: 100;
   font-style: normal;
 }
-
 .nokora-light {
   font-family: "Nokora", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
-
 .nokora-regular {
   font-family: "Nokora", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
 .nokora-bold {
   font-family: "Nokora", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
-
 .nokora-black {
   font-family: "Nokora", sans-serif;
   font-weight: 900;
@@ -67,21 +62,21 @@ body {
   font-style: normal;
 }
 
+
+
+/* Class pour changer la font d'un mot dans une phrase */
 .special-font {
   font-family: "Old Standard TT", serif;
   font-weight: 100;
   font-style: italic;
-  /* Remplacez "Nom de votre police" par le nom de la police que vous souhaitez utiliser */
 }
 
 
-/* Nav Bar */
 
+/* Nav Bar */
 header {
   position: absolute;
-  /* Changement de la position à "fixed" */
   top: 0;
-  /* Fixation en haut de la fenêtre */
   width: 100%;
   z-index: 999;
 }
@@ -100,7 +95,6 @@ nav ul {
   flex-direction: row;
   justify-content: center;
   width: fit-content;
-  /* margin: auto; */
   margin: 0;
   list-style-type: none;
   text-align: center;
@@ -128,8 +122,9 @@ nav ul li a {
   max-width: 100%;
 }
 
-/* ScrollBar */
 
+
+/* ScrollBar */
 ::-webkit-scrollbar {
   width: 8px !important;
 }
@@ -148,8 +143,9 @@ nav ul li a {
   background: #ffffff !important;
 }
 
-/* Mentions Légales / Contacts */
 
+
+/* Mentions Légales / Contacts */
 footer {
   background: url('Images/fond2.png') no-repeat center center fixed;
   background-size: cover;
@@ -172,7 +168,6 @@ footer ul li a {
   text-decoration: none;
   color: #ffffff;
   font-weight: bold;
-
 }
 
 footer h4 {
@@ -190,8 +185,9 @@ footer p {
   margin: 0;
 }
 
-/* Animation underline footer */
 
+
+/* Animation underline footer */
 .hover-underline-animation {
   display: inline-block;
   position: relative;
@@ -216,47 +212,85 @@ footer p {
   transform-origin: bottom left;
 }
 
+
+
 /* --- Bouton top / navbar scroll smooth --- */
 html {
   scroll-behavior: smooth;
 }
 
+
+
 /* --- bouton pour le top --- */
 .btn-top {
-
-  /* Position toujours fixé au même endroit lorsque la page défile */
   position: fixed;
-
-  /* A droite */
   right: 0;
-
-  /* En bas */
   bottom: 0;
-
-  /* Créer un espace supplémentaire à l'intérieur d'un élément */
   padding: 15px;
-
-  /* Marge sur chaque côté de l'élèment */
   margin: 20px;
-
-  /* Définition du pointeur lorsque la sourie est sur l'élèment */
   cursor: pointer;
-
-  /* Attribut de présentation qui définit la couleur de remplissage du cercle */
   fill: #ffffff;
-
-  /* Détermine l'ordre des différentes couches que formeront les éléments */
   z-index: 1;
 }
 
+
+
+/* --- Logo dans index.php --- */
 .logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5vh; /* ou la hauteur que vous voulez pour votre conteneur */
+  height: 5vh;
 }
 
 .logo {
   margin-top: 35px;
   width: 100px;
 }
+
+
+/* Style de base pour le menu */
+.menu-icon {
+  display: none; /* Cache l'icône hamburger par défaut */
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 2rem;
+}
+
+/* Media queries pour le menu responsive */
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Affiche l'icône hamburger pour les appareils mobiles */
+  }
+
+  .nav-links {
+    display: none; /* Cache la liste de liens par défaut */
+    flex-direction: column;
+    position: absolute;
+    background-color: #333;
+    top: 80px;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .nav-links li {
+    margin-top: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex; /* Affiche la liste de liens lorsque le menu est ouvert */
+  }
+}
+
+
+

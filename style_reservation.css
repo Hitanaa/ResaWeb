@@ -1,3 +1,4 @@
+/* --- Titre --- */
 h1 {
     padding-top: 80px;
     text-align: center;
@@ -8,8 +9,11 @@ h1 {
     font-size: 3rem;
 }
 
+
+
+/* --- Calendrier --- */
 .debut {
-    color: #ffffff; /* Couleur rouge-orangé */
+    color: #ffffff;
     font-family: "Nokora", sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -20,7 +24,7 @@ h1 {
 }
 
 .retour {
-    color: #ffffff; /* Couleur rouge-orangé */
+    color: #ffffff;
     font-family: "Nokora", sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -30,20 +34,30 @@ h1 {
     margin-right: 140px ;
 }
 
-.special-font {
-    font-family: "Old Standard TT", serif;
-    font-style: italic;
-}
 
-.background-images {
-    position: absolute;
-    top: 0;
-    left: 0;
+
+/* Calendrier style */
+.calendar {
     width: 100%;
-    height: 100%;
-    pointer-events: none;
+    height: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid white; /* Ajout d'une bordure blanche */
 }
 
+.calendar select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: rgb(100, 100, 100);
+    background-color: transparent; /* Suppression du fond blanc */
+}
+
+
+
+/* --- Image forme background --- */
 .left-image,
 .right-image {
     position: absolute;
@@ -63,10 +77,10 @@ h1 {
 
 
 
+/* --- Overlay --- */
 .overlay {
     background-color: #3a3a3a69; /* Couleur avec 75% d'opacité */
-    width: 60vh; /* Carré avec une largeur de 50% de la hauteur de la fenêtre */
-    height: 105vh; /* Carré avec une hauteur de 50% de la hauteur de la fenêtre */
+    width: 500px; /* Carré avec une largeur de 50% de la hauteur de la fenêtre */; /* Carré avec une largeur de 50% de la hauteur de la fenêtre */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,6 +89,9 @@ h1 {
     border: 2px solid white;
 }
 
+
+
+/* --- Cercles --- */
 .circle2 {
     width: 20px; /* Diamètre du cercle */
     height: 20px; /* Diamètre du cercle */
@@ -124,6 +141,8 @@ h1 {
 }
 
 
+
+/* --- Container --- */
 .form-container {
     width: 300px;
     margin-bottom: 20px;
@@ -136,6 +155,9 @@ h1 {
     margin-top: 30px;
 }
 
+
+
+/* --- Container texte --- */
 .form-group input[type="text"] {
     width: 46%; /* Ajustement pour la taille */
     padding: 10px;
@@ -147,6 +169,8 @@ h1 {
 }
 
 
+
+/* --- Container email --- */
 .form-group input[type="email"] {
     width: 100%;
     height: 40px;
@@ -157,6 +181,29 @@ h1 {
     color: white;
 }
 
+
+
+/* "Une deuxième moto ?" */
+.moto {
+    margin: 40px auto 20px;
+    width: fit-content;
+    text-align: center;
+    
+}
+
+.moto h2 {
+    color: #ffffff;
+    font-family: "Nokora", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+
+/* --- Nom moto menu déroulant --- */
 .name-moto {
     width: 100px;
     height: 100px;
@@ -170,26 +217,6 @@ h1 {
     
 }
 
-/* Styles spécifiques au déroulement */
-.moto {
-    margin: 40px auto 20px; /* Centrage horizontal et ajout de marge en bas */
-    width: fit-content; /* Ajustement de la largeur au contenu */
-    text-align: center; /* Centrage du texte à l'intérieur */
-    
-}
-/* Style du titre */
-.moto h2 {
-    color: #ffffff; /* Couleur rouge-orangé */
-    font-family: "Nokora", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    font-size: 1rem;
-    text-align: center;
-    margin-top: 15px;
-}
-
-
-
 /* Style du déroulement */
 #name-moto {
     font-size: 1rem; /* Taille de police agrandie */
@@ -202,6 +229,9 @@ h1 {
     font-style: normal;
 }
 
+
+
+/* Bouton */
 .form-group input[type="submit"] {
     display: inline-block;
     padding: 10px 20px;
@@ -222,24 +252,9 @@ h1 {
     color: #7b0000;
 }
 
-.calendar {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    border: 2px solid white; /* Ajout d'une bordure blanche */
-}
 
-.calendar select {
-    padding: 5px;
-    font-size: 16px;
-    border-radius: 5px;
-    color: rgb(100, 100, 100);
-    background-color: transparent; /* Suppression du fond blanc */
-}
 
+/* Case confirmation */
 .confirmation {
     padding: 5px;
     border-radius: 5px;
@@ -257,5 +272,114 @@ label {
     font-weight: 500;
     font-style: normal;
     font-size: 0.8rem;
+}
+
+
+/* Téléphones portables en portrait */
+@media (max-width: 480px) {
+    .overlay {
+        width: 400px;
+    }
+    .left-image, .right-image {
+        width: 30px;
+    }
+    .circle2  {
+        top: 320px;
+        left: 45%;
+    }
+    .circle {
+        top: 320px;
+        left: 55%;
+    }
+}
+
+/* Téléphones portables en paysage */
+@media (min-width: 481px) and (max-width: 767px) {
+    .overlay {
+        width: 400px;
+    }
+    .left-image, .right-image {
+        width: 80px;
+    }
+    .circle2  {
+        top: 320px;
+        left: 45%;
+    }
+    .circle {
+        top: 320px;
+        left: 55%;
+    }
+}
+
+/* Tablettes en portrait */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .overlay {
+        width: 500px;
+    }
+    .left-image, .right-image {
+        width: 150px;
+    }
+    .circle2  {
+        top: 320px;
+        left: 45%;
+    }
+    .circle {
+        top: 320px;
+        left: 55%;
+    }
+}
+
+/* Tablettes en paysage */
+@media (min-width: 1025px) and (max-width: 1279px) {
+    .overlay {
+        width: 500px;
+    }
+    .left-image, .right-image {
+        width: 300px;
+    }
+    .circle2  {
+        top: 320px;
+        left: 47%;
+    }
+    .circle {
+        top: 320px;
+        left: 54%;
+    }
+}
+
+/* Ordinateurs de bureau avec petit écran */
+@media (min-width: 1280px) and (max-width: 1366px) {
+    .circle2  {
+        top: 320px;
+        left: 47%;
+    }
+    .circle {
+        top: 320px;
+        left: 54%;
+    }
+}
+
+/* Ordinateurs de bureau avec écran moyen */
+@media (min-width: 1367px) and (max-width: 1440px) {
+    .circle2  {
+        top: 320px;
+        left: 47%;
+    }
+    .circle {
+        top: 320px;
+        left: 54%;
+    }
+}
+
+/* Ordinateurs de bureau avec grand écran */
+@media (min-width: 1441px) {
+    .circle2  {
+        top: 320px;
+        left: 48%;
+    }
+    .circle {
+        top: 320px;
+        left: 52%;
+    }
 }
 
