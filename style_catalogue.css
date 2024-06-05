@@ -82,3 +82,37 @@
 .w-80 {
   width: 80% !important;
 }
+
+
+@media (min-width: 480px)  and (max-width: 1024px) {
+  .sentence {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/* Tablettes en paysage */
+@media (min-width: 1025px) and (max-width: 1279px) {
+  .sentence {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Ordinateurs de bureau avec petit écran */
+@media (min-width: 1280px) and (max-width: 1366px) {
+  .sentence {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Ordinateurs de bureau avec écran moyen */
+@media (min-width: 1367px) and (max-width: 1440px) {
+  
+}
+
+/* Ordinateurs de bureau avec grand écran */
+@media (min-width: 1441px) {
+  
+}
+

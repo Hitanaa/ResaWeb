@@ -30,5 +30,7 @@
                     ?>
 
 
+
+
 6.  Retourner dans le localhost sur un navigateur et ouvrir le dossier contenant le site web. Si tout fonctionne, le site web s'affiche.
     En local, le site web est accessible depuis l'URL : "http://localhost/resaweb/index.php"

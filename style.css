@@ -73,6 +73,20 @@ body {
   font-style: italic;
 }
 
+/* =========== CRÉATION DU BOUTON POUR LE TOP =========== */
+
+/* --- bouton pour le top --- */
+.btn-top {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 15px;
+  margin: 20px;
+  cursor: pointer;
+  fill: #ffffff;
+  z-index: 1;
+}
+
 
 
                                              /*  ========= NAV BAR ========= */
@@ -228,19 +242,6 @@ footer p {
 .logo {
   margin-top: 35px;
   width: 100px;
-}
-
-
-                                             /*  ========= BOUTON POUR REVENIR EN HAUT ========= */
-.btn-top {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  padding: 15px;
-  margin: 20px;
-  cursor: pointer;
-  fill: #ffffff;
-  z-index: 1;
 }
 
 
