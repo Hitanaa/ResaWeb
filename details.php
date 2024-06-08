@@ -75,9 +75,9 @@ $images = $ImagemotosStatement->fetchAll(PDO::FETCH_ASSOC);
   </header>
 
   <!-- ----------- Titre ----------- -->
-  <div>
-    <h1>DIAMANT</h1>
-    <h1 class="upside">DIAMANT</h1>
+  <div class="title">
+    <h1><?=  $moto['titre'] ?></h1>
+    <h1 class="upside"> <?=  $moto['titre'] ?></h1>
   </div>
 
   <!-- ----------- Bouton pour revenir en haut  ----------- -->
@@ -94,11 +94,11 @@ $images = $ImagemotosStatement->fetchAll(PDO::FETCH_ASSOC);
 
       <p data-aos="fade-down"
       data-aos-easing="linear"
-      data-aos-duration="500">Sa <b>silhouette blanche</b> éblouissante, rehaussée de touches <b>dorées</b>, offre une esthétique à <b>couper le souffle</b>. </p>
+      data-aos-duration="500"><?php echo $moto['description1']; ?></p>
 
       <p data-aos="fade-down"
       data-aos-easing="linear"
-      data-aos-duration="500">Elle marie <b>puissance</b> et <b>élégance</b> pour une expérience de conduite <b>sans pareille</b>.</p>
+      data-aos-duration="500"><?php echo $moto['description2']; ?></p>
     </div>
     <?php
 
@@ -111,11 +111,7 @@ $images = $ImagemotosStatement->fetchAll(PDO::FETCH_ASSOC);
   <div class="container_wheel">
     <p data-aos="fade-down"
     data-aos-easing="linear"
-    data-aos-duration="500">D'un blanc éclatant, elles incarnent la <b>rareté</b> et l'<b>élégance</b> à l'état pur.
-
-Chaque rayon est une <b>œuvre d'art</b>, chaque contour une <b>symphonie visuelle</b>.
-
-Leur beauté exceptionnelle est une invitation à l'<b>aventure</b> sur chaque kilomètre parcouru.</p>
+    data-aos-duration="500"><?php echo $moto['description3']; ?></p>
     <div class="wheel" >
     <?php
     echo '<img src="'.$images[2]['lien'].'" alt="">';
@@ -133,14 +129,7 @@ Leur beauté exceptionnelle est une invitation à l'<b>aventure</b> sur chaque k
     <div class="motor_text">
         <p data-aos="fade-down"
         data-aos-easing="linear"
-        data-aos-duration="500">Constitué d'<b>or pur</b>, chaque composant, chaque 
-détail brillant, témoigne d'une <b>ingénierie 
-précise</b> et d'un <b>savoir-faire artisanal 
-incomparable</b>. <br>
-
-Ce moteur n'est pas seulement une <b>source 
-de puissance</b>, mais aussi une <b>pièce de 
-collection</b>. </p>
+        data-aos-duration="500"><?php echo $moto['description4']; ?></p>
     </div>
 </div>
 
@@ -173,10 +162,11 @@ collection</b>. </p>
     </ul>
     <p>Tous droits réservés à Prestige © 2024</p>
   </footer>
-</body>
 
   <!-- Librairy AOS  -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+
+</body>

@@ -123,23 +123,23 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-4 col-md-12 mb-4">
-              <img class="shadow-1-strong mb-4"
-                src="Images/moto_1.png" alt="moto"/>
-              <h5 class="mb-3 text-white">Diamant</h5>
+            <a href="details.php?id=1"><img class="shadow-1-strong mb-4"
+                src="Images/moto_1.png" alt="moto"/></a>
+                <a href="details.php?id=1"><h5 class="mb-3 text-white">Diamant</h5></a>
               <p class="text-white">5000€ - jour</p>
             </div>
 
             <div class="col-lg-4 col-md-12 mb-4 d-none d-md-block">
-              <img class="shadow-1-strong mb-4"
-                src="Images/moto_2.png" alt="moto"/>
-              <h5 class="mb-3 text-white">Saphir</h5>
+            <a href="details.php?id=2"><img class="shadow-1-strong mb-4"
+                src="Images/moto_2.png" alt="moto"/></a>
+                <a href="details.php?id=2"><h5 class="mb-3 text-white">Saphir</h5></a>
               <p class="text-white">3000€ - jour</p>
             </div>
 
             <div class="col-lg-4 col-md-12 mb-4 d-none d-lg-block">
-              <img class="shadow-1-strong mb-4"
-                src="Images/moto_3.png" alt="moto"/>
-              <h5 class="mb3 text-white">Améthyste</h5>
+            <a href="details.php?id=3"><img class="shadow-1-strong mb-4"
+                src="Images/moto_3.png" alt="moto"/></a>
+                <a href="details.php?id=3"><h5 class="mb3 text-white">Améthyste</h5></a>
               <p class="text-white">3000€ - jour</p>
             </div>
           </div>
@@ -151,23 +151,23 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-4 col-md-12 mb-4">
-              <img class="shadow-1-strong mb-4"
-                src="Images/moto_4.png" alt="moto"/>
-              <h5 class="mb-3 text-white">Opale</h5>
+            <a href="details.php?id=4"><img class="shadow-1-strong mb-4"
+                src="Images/moto_4.png" alt="moto"/></a>
+                <a href="details.php?id=4"><h5 class="mb-3 text-white">Opale</h5></a>
               <p class="text-white">3500€ - jour</p>
             </div>
 
             <div class="col-lg-4 col-md-12 mb-4 d-none d-md-block">
-              <img class="shadow-1-strong mb-4"
-                src="Images/moto_5.png" alt="moto"/>
-              <h5 class="mb-3 text-white">Onyx</h5>
+            <a href="details.php?id=5"><img class="shadow-1-strong mb-4"
+                src="Images/moto_5.png" alt="moto"/></a>
+                <a href="details.php?id=5"><h5 class="mb-3 text-white">Onyx</h5></a>
               <p class="text-white">3500€ - jour</p>
             </div>
 
             <div class="col-lg-4 col-md-12 mb-4 d-none d-lg-block">
-              <img class="shadow-1-strong mb-4"
-                src="Images/moto_6.png" alt="moto"/>
-              <h5 class="mb-3 text-white">Quartz</h5>
+            <a href="details.php?id=6"><img class="shadow-1-strong mb-4"
+                src="Images/moto_6.png" alt="moto"/></a>
+                <a href="details.php?id=6"><h5 class="mb-3 text-white">Quartz</h5></a>
               <p class="text-white">2500€ - jour</p>
             </div>
           </div>

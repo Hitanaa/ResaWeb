@@ -25,14 +25,14 @@
                                              /*  ========= SYSTEME DE TRI ========= */
 /* Tri */
 .tri {
-  padding-top: 20px;
+  padding-top: 80px;
   padding-bottom: 50px;
 }
 
 .tri select {
   padding: 10px;
-  border-radius: 10px;
-  margin-right: 10px;
+  border-radius: 5px;
+  margin-right: 1200px;
 }
 
 .container{
@@ -44,7 +44,6 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
-
 
 
 .container .box-container .card {

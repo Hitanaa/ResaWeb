@@ -11,6 +11,7 @@ h1 {
     font-family: "Old Standard TT", serif;
     font-weight: 700;
     font-style: normal;
+    text-transform: uppercase;
 }
 
 /* Titre à l'envers */
@@ -22,6 +23,7 @@ h1 {
     font-size: 3.5rem;
     padding-left: 200px;
     transform: rotate(180deg);
+    text-transform: uppercase;
 }
 
 /* Bouton réservation du haut */
@@ -154,7 +156,7 @@ p {
     font-family: "Nokora", sans-serif;
     font-size: 1.2rem;
     width: 50%;
-    margin-left: 300px;
+    margin-left: 280px;
     margin-top: 100px;
     margin-bottom: 200px;
     white-space: pre-wrap;

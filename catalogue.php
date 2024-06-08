@@ -58,9 +58,7 @@
 
     <!-- Filtre/Tri -->
     <div class="tri">
-
       <input type="text" id="search" placeholder="Rechercher par nom...">
-      <label for="selectOption">Tri</label>
       <select name="tri" id="tri">
         <option value="default" selected>Aucun</option>
         <option value="date_asc">Prix croissant</option>

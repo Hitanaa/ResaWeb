@@ -65,6 +65,10 @@ body {
 }
 
 
+a h5 {
+  color: white;
+}
+
 
 /* Class pour changer la font d'un mot dans une phrase */
 .special-font {
