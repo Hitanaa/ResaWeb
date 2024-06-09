@@ -1,3 +1,6 @@
+// =========== 2.a s'il contient la fonctionnalité de filtre parmi les résultats de la recherche ===========
+// =========== 2.b s'il contient la fonctionnalité de tri parmi les résultats de la recherche ===========
+
 document.getElementById('tri').addEventListener('change', function () {
     fetchMotos();
   });

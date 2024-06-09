@@ -32,6 +32,12 @@ if (isset($search)) {
 $stmt->execute();
 $recipes = $stmt->fetchAll();
 
+// REGLES 131 // OPQUAST - Chaque lien est doté d'un intitulé dans le code source.
+// REGLES 132 // OPQUAST - Le libellé de chaque lien décrit sa fonction ou la nature du contenu vers lequel il pointe.
+// REGLES 133 // OPQUAST - Les liens de même nature ont des couleurs, des formes et des comportements identiques sur toutes les pages.
+// REGLES 134 // OPQUAST - Le soulignement est réservé aux liens.
+// REGLES 134 // OPQUAST - Les liens sont visuellement différenciés du reste du contenu.
+
 if ($stmt->rowCount() > 0) {
     foreach ($recipes as $recipe) {
         echo '<div class="col-lg-4 col-md-6 mb-4">

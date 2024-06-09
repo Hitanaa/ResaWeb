@@ -1,3 +1,25 @@
+<!-- Cette règle est non applicable car Je n'ai pas d'image porteuse d'information -->
+<!-- REGLES 113 // OPQUAST - Chaque image porteuse d'information est dotée d'une alternative textuelle appropriée. -->
+
+
+<!-- ========================================================================================= -->
+<!-- REGLES 160 // OPQUAST - Le focus clavier n'est ni supprimé ni masqué. -->
+<!-- REGLES 161 // OPQUAST - Le site est intégralement utilisable au clavier. -->
+<!-- REGLES 162 // OPQUAST - La navigation au clavier s'effectue dans un ordre prévisible. -->
+
+<!-- ========================================================================================= -->
+<!-- REGLES 175 // OPQUAST - La charte graphique est cohérente sur l'ensemble du site. -->
+<!-- REGLES 176 // OPQUAST - L'information n'est pas véhiculée uniquement par la couleur. -->
+<!-- REGLES 177 // OPQUAST - Les contenus sont présentés avec un contraste suffisant par rapport à leur arrière-plan. -->
+<!-- REGLES 181 // OPQUAST - La taille des éléments cliquables est suffisante. -->
+
+<!-- ========================================================================================= -->
+<!-- REGLES 185 // OPQUAST - Une famille générique de police est indiquée comme dernier élément de substitution. -->
+<!-- REGLES 186 // OPQUAST - Les styles ne justifient pas le texte. -->
+<!-- REGLES 187 // OPQUAST - Les mises en majuscules à des fins décoratives sont effectuées à l'aide des styles -->
+
+<!-- ========================================================================================= -->
+<!-- REGLES 227 // OPQUAST - Le contenu de chaque page est organisé selon une structure de titres et sous-titres hiérarchisée. -->
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -45,6 +67,10 @@
                 <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"></path>
             </svg>
         </a>
+
+<!-- REGLES 150 // OPQUAST - Il est possible de revenir à la page d'accueil depuis toutes les pages. -->
+<!-- REGLES 152 // OPQUAST - Les items actifs de menu sont signalés. -->
+<!-- REGLES 154 // OPQUAST - Les icônes de navigation sont accompagnées d'une légende explicite. -->
 
     <!-- ----------- Nav Bar ----------- -->
     <header>
@@ -98,6 +124,8 @@
 
       </section>
 
+<!-- REGLES 111 // OPQUAST - Chaque image décorative est dotée d'une alternative textuelle appropriée. -->
+<!-- REGLES 112 // OPQUAST - Chaque image-lien est dotée d'une alternative textuelle appropriée. -->
       <!-- ----------- Section "NOS MOTOS" ----------- -->
       <section class="moto">
   <h3 data-aos="fade-down"
@@ -118,6 +146,12 @@
     </div>
     <!-- Inner -->
     <div class="carousel-inner py-4">
+
+<!-- REGLES 131 // OPQUAST - Chaque lien est doté d'un intitulé dans le code source. -->
+<!-- REGLES 132 // OPQUAST - Le libellé de chaque lien décrit sa fonction ou la nature du contenu vers lequel il pointe. -->
+<!-- REGLES 133 // OPQUAST - Les liens de même nature ont des couleurs, des formes et des comportements identiques sur toutes les pages. -->
+<!-- REGLES 134 // OPQUAST - Le soulignement est réservé aux liens. -->
+<!-- REGLES 134 // OPQUAST - Les liens sont visuellement différenciés du reste du contenu. -->
       <!-- Single item -->
       <div class="carousel-item active">
         <div class="container">
@@ -179,9 +213,8 @@
 </section>
 
 
-
-
-
+<!-- REGLES 111 // OPQUAST - Chaque image décorative est dotée d'une alternative textuelle appropriée. -->
+<!-- REGLES 112 // OPQUAST - Chaque image-lien est dotée d'une alternative textuelle appropriée. -->
       <!-- ----------- Sections "NOS AVIS" ----------- -->
       <section class="comment">
         <h3 data-aos="fade-down"

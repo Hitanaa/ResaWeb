@@ -1,3 +1,4 @@
+// REGLES 88 // OPQUAST - L'utilisateur est averti de la perte d'information en cas d'utilisation de l'historique de son navigateur dans un processus complexe.
 // Message "êtes vous sûr de vouloir quitter cette page ?"
 document.addEventListener('DOMContentLoaded', (event) => {
     let formChanged = false;
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
+// REGLES 80 // OPQUAST - Les messages d'erreur personnalisés sont exprimés dans la langue du formulaire
 // Message d'erreurs / conditions
 function checkDates() {
     const jourDebut = document.getElementById('jourDebut').value;

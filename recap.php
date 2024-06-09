@@ -1,3 +1,25 @@
+<!-- Cette règle est non applicable car Je n'ai pas d'image porteuse d'information -->
+<!-- REGLES 113 // OPQUAST - Chaque image porteuse d'information est dotée d'une alternative textuelle appropriée. -->
+ 
+
+<!-- ========================================================================================= -->
+<!-- REGLES 160 // OPQUAST - Le focus clavier n'est ni supprimé ni masqué. -->
+<!-- REGLES 161 // OPQUAST - Le site est intégralement utilisable au clavier. -->
+<!-- REGLES 162 // OPQUAST - La navigation au clavier s'effectue dans un ordre prévisible. -->
+
+<!-- ========================================================================================= -->
+<!-- REGLES 175 // OPQUAST - La charte graphique est cohérente sur l'ensemble du site. -->
+<!-- REGLES 176 // OPQUAST - L'information n'est pas véhiculée uniquement par la couleur. -->
+<!-- REGLES 177 // OPQUAST - Les contenus sont présentés avec un contraste suffisant par rapport à leur arrière-plan. -->
+<!-- REGLES 181 // OPQUAST - La taille des éléments cliquables est suffisante. -->
+
+<!-- ========================================================================================= -->
+<!-- REGLES 185 // OPQUAST - Une famille générique de police est indiquée comme dernier élément de substitution. -->
+<!-- REGLES 186 // OPQUAST - Les styles ne justifient pas le texte. -->
+<!-- REGLES 187 // OPQUAST - Les mises en majuscules à des fins décoratives sont effectuées à l'aide des styles -->
+
+<!-- ========================================================================================= -->
+<!-- REGLES 227 // OPQUAST - Le contenu de chaque page est organisé selon une structure de titres et sous-titres hiérarchisée. -->
 <?php
 
 if (!empty($_REQUEST['nom']) && !empty($_REQUEST['prenom'])) {
@@ -64,6 +86,10 @@ if (!empty($_REQUEST['nom']) && !empty($_REQUEST['prenom'])) {
 <body>
 <meta name="description" content="Récapitulatif de la commande" />
 
+
+<!-- REGLES 150 // OPQUAST - Il est possible de revenir à la page d'accueil depuis toutes les pages. -->
+<!-- REGLES 152 // OPQUAST - Les items actifs de menu sont signalés. -->
+<!-- REGLES 154 // OPQUAST - Les icônes de navigation sont accompagnées d'une légende explicite. -->
 <!-- ----------- Nav Bar ----------- -->
 <header>
       <nav>
@@ -78,6 +104,8 @@ if (!empty($_REQUEST['nom']) && !empty($_REQUEST['prenom'])) {
         </ul>
       </nav>
     </header>
+
+<!-- REGLES 83 // OPQUAST - La soumission d'un formulaire est suivie d'un message indiquant la réussite ou non de l'action souhaitée. -->
 <!-- ----------- Récapitulatif ----------- -->
     <h1>RÉCAPITULATIF<br>DE <span class="special-font">VOTRE COMMANDE</span></h1>
     <div class="overlay">
@@ -86,6 +114,13 @@ if (!empty($_REQUEST['nom']) && !empty($_REQUEST['prenom'])) {
         <img src="Images/forme2.png" class="left-image">
         <div class="container">
             <div class="perso">
+
+<!-- REGLES 68 // OPQUAST - Les informations complétant l'étiquette d'un champ sont associées à celui-ci dans le code-source. -->
+<!-- 
+                <fieldset>
+                    <legend>Informations personnelles</legend>
+                </fieldset> -->
+
                 <h2>INFORMATIONS <span class="special-font">PERSONNELLES</span></h2>
             </div>
         <div class="info">
@@ -95,6 +130,11 @@ if (!empty($_REQUEST['nom']) && !empty($_REQUEST['prenom'])) {
             </div>
             <p><b>Email :</b> <?php echo htmlspecialchars($email); ?></p>
         </div>
+
+<!-- REGLES 68 // OPQUAST - Les informations complétant l'étiquette d'un champ sont associées à celui-ci dans le code-source. -->
+        <!-- <fieldset>
+                    <legend>Date de début et de retour</legend>
+                </fieldset> -->
 
         <h3>DÉTAILS DE <span class="special-font">RÉSERVATION</span></h3>
         <div class="info-container">
@@ -119,6 +159,12 @@ if (!empty($_REQUEST['nom']) && !empty($_REQUEST['prenom'])) {
         <hr style="border: none; border-top: 1px solid #fff;">
         <div class="info-container">
             <div class="text-info">
+
+<!-- REGLES 68 // OPQUAST - Les informations complétant l'étiquette d'un champ sont associées à celui-ci dans le code-source. -->
+        <!-- <fieldset>
+                    <legend>Date de début et de retour</legend>
+                </fieldset> -->
+
                 <p><b>Nom :</b> <?php echo htmlspecialchars($nameMoto2); ?></p>
                 <p><b>DATE DE DÉBUT :</b> <?php echo $dateDebut->format('d/m/Y'); ?></p>
                 <p><b>DATE DE RETOUR :</b> <?php echo $dateFin->format('d/m/Y'); ?></p>
@@ -135,6 +181,8 @@ if (!empty($_REQUEST['nom']) && !empty($_REQUEST['prenom'])) {
             <p><?php echo $prixTotal; ?>€</p>
         </div>
 
+<!-- REGLES 82 // OPQUAST - La page affichée après l'envoi d'un formulaire permet de reprendre directement la navigation. -->
+        
         <!-- ----------- Bouton Confirmation ----------- -->
 
         <a href="index.php"> <button class="btn-confirm">CONFIRMER</button></a>
