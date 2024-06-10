@@ -20,45 +20,6 @@
 
 <!-- ========================================================================================= -->
 <!-- REGLES 227 // OPQUAST - Le contenu de chaque page est organisé selon une structure de titres et sous-titres hiérarchisée. -->
-<?php
-
-if (!empty($_REQUEST['nom']) && !empty($_REQUEST['prenom'])) {
-    $firstname = $_REQUEST['prenom'];
-    $lastname = $_REQUEST['nom'];
-    $email = $_REQUEST['email'];
-    $dateDebut = new DateTime($_REQUEST['anneeDebut']. '-'.$_REQUEST['moisDebut'].'-'.$_REQUEST['jourDebut']);
-    $dateFin = new DateTime($_REQUEST['anneeRetour'] .'-'.$_REQUEST['moisRetour'] .'-'.$_REQUEST['jourRetour']);
-    $interval = $dateDebut->diff($dateFin);
-    $nameMoto2 = $_REQUEST['nameMoto2'];
-    $totalDays = $interval->days + 1; // Inclure le premier jour dans le comptage
-
-    // Connexion à la base de données
-    include('connexionBDD.php');
-
-    $conn = Database::getBDD();
-    // Récupérer l'ID de la moto à partir des paramètres de la requête
-    $idMoto = $_REQUEST['id'];
-
-    // Requête pour récupérer les informations de la moto
-    $sqlMoto = "SELECT * FROM moto WHERE id = :idMoto";
-    $motosStatement = $conn->prepare($sqlMoto);
-    $motosStatement->bindParam(':idMoto', $idMoto, PDO::PARAM_INT);
-    $motosStatement->execute();
-    $moto = $motosStatement->fetch();
-    
-    $prixTotal = $moto['prix'] * $totalDays; // Calculer le prix total pour la première moto
-
-    if (!empty($nameMoto2) && $nameMoto2 != 'all') {
-        $sqlMoto2 = "SELECT * FROM moto WHERE titre = :nameMoto";
-        $motosStatement2 = $conn->prepare($sqlMoto2);
-        $motosStatement2->bindParam(':nameMoto', $nameMoto2, PDO::PARAM_STR);
-        $motosStatement2->execute();
-        $moto2 = $motosStatement2->fetch();
-
-        $prixTotal += $moto2['prix'] * $totalDays; // Ajouter le prix total pour la deuxième moto
-    }
-}
-?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -83,26 +44,25 @@ if (!empty($_REQUEST['nom']) && !empty($_REQUEST['prenom'])) {
     <!-- Library AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
-<body>
-<meta name="description" content="Récapitulatif de la commande" />
 
+<body>
 
 <!-- REGLES 150 // OPQUAST - Il est possible de revenir à la page d'accueil depuis toutes les pages. -->
 <!-- REGLES 152 // OPQUAST - Les items actifs de menu sont signalés. -->
 <!-- REGLES 154 // OPQUAST - Les icônes de navigation sont accompagnées d'une légende explicite. -->
 <!-- ----------- Nav Bar ----------- -->
-<header>
-      <nav>
-        <a href="index.php" class="logo_nav"><img src="Images/logo_nav.png" alt=""></a>
-        <div class="menu-icon">
-          <i class="fas fa-bars"></i>
-        </div>
-        <ul class="nav-links">
-          <li><b><a href="index.php" class="hover-underline-animation">Accueil</a></b></li>
-          <li><b><a href="catalogue.php" class="hover-underline-animation">Catalogue</a></b></li>
-          <li><b><a href="apropos.php" class="hover-underline-animation">À Propos</a></b></li>
-        </ul>
-      </nav>
+    <header>
+        <nav>
+            <a href="index.php" class="logo_nav"><img src="Images/logo_nav.png" alt=""></a>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><b><a href="index.php" class="hover-underline-animation">Accueil</a></b></li>
+                <li><b><a href="catalogue.php" class="hover-underline-animation">Catalogue</a></b></li>
+                <li><b><a href="apropos.php" class="hover-underline-animation">À Propos</a></b></li>
+            </ul>
+        </nav>
     </header>
 
 <!-- REGLES 83 // OPQUAST - La soumission d'un formulaire est suivie d'un message indiquant la réussite ou non de l'action souhaitée. -->
@@ -115,7 +75,7 @@ if (!empty($_REQUEST['nom']) && !empty($_REQUEST['prenom'])) {
         <div class="container">
             <div class="perso">
 
-<!-- REGLES 68 // OPQUAST - Les informations complétant l'étiquette d'un champ sont associées à celui-ci dans le code-source. -->
+            <!-- REGLES 68 // OPQUAST - Les informations complétant l'étiquette d'un champ sont associées à celui-ci dans le code-source. -->
 <!-- 
                 <fieldset>
                     <legend>Informations personnelles</legend>
@@ -123,69 +83,107 @@ if (!empty($_REQUEST['nom']) && !empty($_REQUEST['prenom'])) {
 
                 <h2>INFORMATIONS <span class="special-font">PERSONNELLES</span></h2>
             </div>
-        <div class="info">
-            <div class="name-container">
-                <p><b>Prénom :</b> <?php echo htmlspecialchars($firstname); ?></p>
-                <p><b>Nom :</b> <?php echo htmlspecialchars($lastname); ?></p>
+            <div class="info">
+                <div class="name-container">
+                    <p><b>Prénom :</b> <?php echo htmlspecialchars($_REQUEST['prenom']); ?></p>
+                    <p><b>Nom :</b> <?php echo htmlspecialchars($_REQUEST['nom']); ?></p>
+                </div>
+                <p><b>Email :</b> <?php echo htmlspecialchars($_REQUEST['email']); ?></p>
             </div>
-            <p><b>Email :</b> <?php echo htmlspecialchars($email); ?></p>
-        </div>
 
-<!-- REGLES 68 // OPQUAST - Les informations complétant l'étiquette d'un champ sont associées à celui-ci dans le code-source. -->
+            <!-- REGLES 68 // OPQUAST - Les informations complétant l'étiquette d'un champ sont associées à celui-ci dans le code-source. -->
         <!-- <fieldset>
                     <legend>Date de début et de retour</legend>
                 </fieldset> -->
 
-        <h3>DÉTAILS DE <span class="special-font">RÉSERVATION</span></h3>
-        <div class="info-container">
-            <div class="text-info">
-                <p><b>Nom :</b> <?php echo htmlspecialchars($moto['titre']); ?></p>
-                <p><b>DATE DE DÉBUT :</b> <?php echo $dateDebut->format('d/m/Y'); ?></p>
-                <p><b>DATE DE RETOUR :</b> <?php echo $dateFin->format('d/m/Y'); ?></p>
-                <p><b>Prix par jour :</b> <?php echo htmlspecialchars($moto['prix']); ?>€</p>
-                <p><b>Total pour <?php echo $totalDays; ?> jours :</b> <?php echo htmlspecialchars($moto['prix'] * $totalDays); ?>€</p>
-            </div>
-            <img src="Images/moto_<?php echo htmlspecialchars($moto['id']); ?>.png" alt="Image moto" class="info-image">
-        </div>
+            <h3>DÉTAILS DE <span class="special-font">RÉSERVATION</span></h3>
+            <form id="confirmationForm" method="post" action="send_email.php">
+                <input type="hidden" name="prenom" value="<?php echo htmlspecialchars($_REQUEST['prenom']); ?>">
+                <input type="hidden" name="nom" value="<?php echo htmlspecialchars($_REQUEST['nom']); ?>">
+                <input type="hidden" name="email" value="<?php echo htmlspecialchars($_REQUEST['email']); ?>">
+                <input type="hidden" name="anneeDebut" value="<?php echo htmlspecialchars($_REQUEST['anneeDebut']); ?>">
+                <input type="hidden" name="moisDebut" value="<?php echo htmlspecialchars($_REQUEST['moisDebut']); ?>">
+                <input type="hidden" name="jourDebut" value="<?php echo htmlspecialchars($_REQUEST['jourDebut']); ?>">
+                <input type="hidden" name="anneeRetour" value="<?php echo htmlspecialchars($_REQUEST['anneeRetour']); ?>">
+                <input type="hidden" name="moisRetour" value="<?php echo htmlspecialchars($_REQUEST['moisRetour']); ?>">
+                <input type="hidden" name="jourRetour" value="<?php echo htmlspecialchars($_REQUEST['jourRetour']); ?>">
+                <input type="hidden" name="nameMoto2" value="<?php echo htmlspecialchars($_REQUEST['nameMoto2']); ?>">
+                <input type="hidden" name="idMoto" value="<?php echo htmlspecialchars($_REQUEST['id']); ?>">
 
-        <?php if (!empty($nameMoto2) && $nameMoto2 != 'all') : ?>
-        <?php 
-            $sqlMoto2 = "SELECT * FROM moto WHERE titre = :nameMoto";
-            $motosStatement2 = $conn->prepare($sqlMoto2);
-            $motosStatement2->bindParam(':nameMoto', $nameMoto2, PDO::PARAM_STR);
-            $motosStatement2->execute();
-            $moto2 = $motosStatement2->fetch();
-        ?>
-        <hr style="border: none; border-top: 1px solid #fff;">
-        <div class="info-container">
-            <div class="text-info">
+            <?php
+                include('connexionBDD.php');
+                $conn = Database::getBDD();
+                $idMoto = $_REQUEST['id'];
 
-<!-- REGLES 68 // OPQUAST - Les informations complétant l'étiquette d'un champ sont associées à celui-ci dans le code-source. -->
+                
+
+                // Récupérer les informations de la première moto
+                $sqlMoto = "SELECT * FROM moto WHERE id = :idMoto";
+                $motosStatement = $conn->prepare($sqlMoto);
+                $motosStatement->bindParam(':idMoto', $idMoto, PDO::PARAM_STR);
+                $motosStatement->execute();
+                $moto = $motosStatement->fetch();
+
+                $dateDebut = new DateTime($_POST['anneeDebut'] . '-' . $_POST['moisDebut'] . '-' . $_POST['jourDebut']);
+                $dateFin = new DateTime($_POST['anneeRetour'] . '-' . $_POST['moisRetour'] . '-' . $_POST['jourRetour']);
+                $interval = $dateDebut->diff($dateFin);
+                $totalDays = $interval->days + 1; // Inclure le premier jour dans le comptage
+
+                $prixTotalMoto = $moto['prix'] * $totalDays;
+                $total = $prixTotalMoto;
+            ?>
+            <div class="info-container">
+                <div class="text-info">
+
+                <!-- REGLES 68 // OPQUAST - Les informations complétant l'étiquette d'un champ sont associées à celui-ci dans le code-source. -->
         <!-- <fieldset>
                     <legend>Date de début et de retour</legend>
                 </fieldset> -->
 
-                <p><b>Nom :</b> <?php echo htmlspecialchars($nameMoto2); ?></p>
-                <p><b>DATE DE DÉBUT :</b> <?php echo $dateDebut->format('d/m/Y'); ?></p>
-                <p><b>DATE DE RETOUR :</b> <?php echo $dateFin->format('d/m/Y'); ?></p>
-                <p><b>Prix par jour :</b> <?php echo htmlspecialchars($moto2['prix']); ?>€</p>
-                <p><b>Total pour <?php echo $totalDays; ?> jours :</b> <?php echo htmlspecialchars($moto2['prix'] * $totalDays); ?>€</p>
+                    <p><b>Nom :</b> <?php echo htmlspecialchars($moto['titre']); ?></p>
+                    <p><b>DATE DE DÉBUT :</b> <?php echo htmlspecialchars($_POST['jourDebut'] . '/' . $_POST['moisDebut'] . '/' . $_POST['anneeDebut']); ?></p>
+                    <p><b>DATE DE RETOUR :</b> <?php echo htmlspecialchars($_POST['jourRetour'] . '/' . $_POST['moisRetour'] . '/' . $_POST['anneeRetour']); ?></p>
+                    <p><b>Prix par jour :</b> <?php echo $moto['prix']; ?>€</p>
+                    <p><b>Total pour <?php echo htmlspecialchars($totalDays); ?> jours :</b> <?php echo htmlspecialchars($prixTotalMoto); ?>€</p>
+                </div>
+                <img src="../Images/moto_<?php echo htmlspecialchars($idMoto); ?>.png" alt="Image moto" class="info-image">
             </div>
-            <img src="Images/moto_<?php echo htmlspecialchars($moto2['id']); ?>.png" alt="Image moto" class="info-image">
-        </div>
-        <?php endif; ?>
 
-        <!-- ----------- Prix Total ----------- -->
-        <div class="total">
-            <h2>PRIX <span class="special-font">TOTAL</SPAN> :</h2>
-            <p><?php echo $prixTotal; ?>€</p>
-        </div>
+            <?php if (!empty($_POST['nameMoto2']) && $_POST['nameMoto2'] != 'all') : ?>
+                <?php 
+                    $nameMoto2 = $_POST['nameMoto2'];
+                    $sqlMoto2 = "SELECT * FROM moto WHERE titre = :nameMoto2";
+                    $motosStatement2 = $conn->prepare($sqlMoto2);
+                    $motosStatement2->bindParam(':nameMoto2', $nameMoto2, PDO::PARAM_STR);
+                    $motosStatement2->execute();
+                    $moto2 = $motosStatement2->fetch();
 
-<!-- REGLES 82 // OPQUAST - La page affichée après l'envoi d'un formulaire permet de reprendre directement la navigation. -->
+                    $prixTotalMoto2 = $moto2['prix'] * $totalDays;
+                    $total += $prixTotalMoto2;
+                ?>
+                <hr style="border: none; border-top: 1px solid #fff;">
+                <div class="info-container">
+                    <div class="text-info">
+                        <p><b>Nom :</b> <?php echo htmlspecialchars($moto2['titre']); ?></p>
+                        <p><b>DATE DE DÉBUT :</b> <?php echo htmlspecialchars($_POST['jourDebut'] . '/' . $_POST['moisDebut'] . '/' . $_POST['anneeDebut']); ?></p>
+                        <p><b>DATE DE RETOUR :</b> <?php echo htmlspecialchars($_POST['jourRetour'] . '/' . $_POST['moisRetour'] . '/' . $_POST['anneeRetour']); ?></p>
+                        <p><b>Prix par jour :</b> <?php echo $moto2['prix']; ?>€</p>
+                        <p><b>Total pour <?php echo htmlspecialchars($totalDays); ?> jours :</b> <?php echo htmlspecialchars($prixTotalMoto2); ?>€</p>
+                    </div>
+                    <img src="Images/moto_<?php echo htmlspecialchars($moto2['id']); ?>.png" alt="Image moto" class="info-image">
+                </div>
+            <?php endif; ?>
+
+            <!-- ----------- Prix Total ----------- -->
+            <div class="total">
+                <h2>PRIX <span class="special-font">TOTAL</SPAN> :</h2>
+                <p><?php echo htmlspecialchars($total); ?>€</p>
+            </div>
+            
+            <!-- REGLES 82 // OPQUAST - La page affichée après l'envoi d'un formulaire permet de reprendre directement la navigation. -->
         
         <!-- ----------- Bouton Confirmation ----------- -->
-
-        <a href="index.php"> <button class="btn-confirm">CONFIRMER</button></a>
+            <button type="submit" class="btn-confirm">CONFIRMER</button>
         </div>
         <div>
             <img src="Images/forme1.png" class="right-image">
@@ -201,17 +199,11 @@ if (!empty($_REQUEST['nom']) && !empty($_REQUEST['prenom'])) {
         </ul>
         <p>Tout droit réservé à Prestige © 2024</p>
     </footer>
+
+ <!-- Library AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script_mail.js"></script>
+
 </body>
-
-    <!-- Library AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script_recap.js"></script>
-
-    <script>
-        document.querySelector('.menu-icon').addEventListener('click', () => {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('active');
-      });
-      </script>
 
 </html>

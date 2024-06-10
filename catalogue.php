@@ -81,9 +81,11 @@
 
     <h2 class="sentence">UNE <span class="special-font">MOTO</span> INCROYABLE POUR UNE <span class="special-font">ODYSSÉE</span> INOUBLIABLE</h2>
 
-    <!-- Filtre/Tri -->
+    <!-- Filtre/Tri et Barre de recherche -->
     <div class="tri">
+
       <input type="text" id="search" placeholder="Rechercher par nom...">
+
       <select name="tri" id="tri">
         <option value="default" selected>Aucun</option>
         <option value="date_asc">Prix croissant</option>
